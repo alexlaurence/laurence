@@ -2,27 +2,29 @@
 layout: profiles
 permalink: /people/
 title: people
-description: members of the lab or group
+description: Founders of the Laurence family
 nav: true
 nav_order: 7
 
 profiles:
-  # if you want to include more than one profile, just replicate the following block
-  # and create one content file for each profile inside _pages/
   - align: right
-    image: prof_pic.jpg
-    content: about_einstein.md
-    image_circular: false # crops the image to make it circular
+    image: AlexanderAdamLaurence.JPG
+    image_circular: false
+    name: Alexander Adam Laurence
     more_info: >
-      <p>555 your office number</p>
-      <p>123 your address street</p>
-      <p>Your City, State 12345</p>
+      <p>Founder of the Laurence family archive</p>
+      <p>Born 1992</p>
+    content: |
+      <h2>Alexander Adam Laurence</h2>
+      <p>Alexander is one of the founders of the Laurence family and the family archive. His vision and dedication to preserving family history have been instrumental in creating this digital legacy for future generations.</p>
   - align: left
-    image: prof_pic.jpg
-    content: about_einstein.md
-    image_circular: false # crops the image to make it circular
+    image: RinoLaurence.JPG
+    image_circular: false
+    name: Rino Laurence
     more_info: >
-      <p>555 your office number</p>
-      <p>123 your address street</p>
-      <p>Your City, State 12345</p>
+      <p>Co-founder of the Laurence family archive</p>
+      <p>Born 1996</p>
+    content: |
+      <h2>Rino Laurence</h2>
+      <p>Rino is a co-founder of the Laurence family and the family archive. Her commitment to family unity and heritage is a cornerstone of the Laurence legacy.</p>
 ---
