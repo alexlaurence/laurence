@@ -7,8 +7,6 @@ nav: true
 nav_order: 2
 ---
 
-# The Laurence Family Tree
-
 <div id="FamilyChart" class="f3" style="width:100%;height:900px;margin:auto;background-color:rgb(33,33,33);color:#fff;"></div>
 <noscript><p style="color: red; text-align: center;">JavaScript is required to view the interactive family tree.</p></noscript>
 
@@ -41,7 +39,7 @@ nav_order: 2
       .setFields(["first name","last name","avatar"])
       .setEditFirst(true)
 
-    f3EditTree.setEdit()
+    f3EditTree.setNoEdit()
 
     f3Card.setOnCardClick((e, d) => {
       f3EditTree.open(d)
@@ -74,6 +72,8 @@ nav_order: 2
     ]
   }
 </script>
+
+# The Laurence Family Tree
 
 ## Coming Soon
 

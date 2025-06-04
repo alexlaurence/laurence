@@ -7,6 +7,16 @@ nav: true
 nav_order: 3
 ---
 
+<div class="video-archive-placeholder" style="text-align: center; margin: 2rem 0; padding: 3rem; background-color: #f8f9fa; border: 2px dashed #dee2e6; border-radius: 8px;">
+    <h4>🎬 Video Collection</h4>
+    <p><em>Family videos will be organized and displayed here</em></p>
+    <div style="margin: 1rem 0;">
+        <i class="fas fa-video" style="font-size: 3rem; color: #6c757d;"></i>
+    </div>
+    <p>Currently digitizing and cataloguing our family video collection</p>
+    <p><strong>Coming Soon!</strong></p>
+</div>
+
 # The Laurence Family Video Archive
 
 *This digital collection preserves our family's moving memories for future generations.*
@@ -85,14 +95,4 @@ For best results when contributing videos:
 
 ---
 
-*This archive is a work in progress. Check back regularly for new additions to our video collection.*
-
-<div class="video-archive-placeholder" style="text-align: center; margin: 2rem 0; padding: 3rem; background-color: #f8f9fa; border: 2px dashed #dee2e6; border-radius: 8px;">
-    <h4>🎬 Video Collection</h4>
-    <p><em>Family videos will be organized and displayed here</em></p>
-    <div style="margin: 1rem 0;">
-        <i class="fas fa-video" style="font-size: 3rem; color: #6c757d;"></i>
-    </div>
-    <p>Currently digitizing and cataloguing our family video collection</p>
-    <p><strong>Coming Soon!</strong></p>
-</div> 
+*This archive is a work in progress. Check back regularly for new additions to our video collection.* 

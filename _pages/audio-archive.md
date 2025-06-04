@@ -7,6 +7,16 @@ nav: true
 nav_order: 4
 ---
 
+<div class="audio-archive-placeholder" style="text-align: center; margin: 2rem 0; padding: 3rem; background-color: #f8f9fa; border: 2px dashed #dee2e6; border-radius: 8px;">
+    <h4>🎧 Audio Collection</h4>
+    <p><em>Family audio recordings and oral histories will be organized here</em></p>
+    <div style="margin: 1rem 0;">
+        <i class="fas fa-microphone" style="font-size: 3rem; color: #6c757d;"></i>
+    </div>
+    <p>Currently digitizing and preserving our family's audio heritage</p>
+    <p><strong>Listen for Updates!</strong></p>
+</div>
+
 # The Laurence Family Audio Archive
 
 *Preserving the voices and stories that connect us across generations.*
@@ -105,14 +115,4 @@ For best quality:
 
 ---
 
-*Every voice tells a story. Help us preserve the soundtrack of our family's journey.*
-
-<div class="audio-archive-placeholder" style="text-align: center; margin: 2rem 0; padding: 3rem; background-color: #f8f9fa; border: 2px dashed #dee2e6; border-radius: 8px;">
-    <h4>🎧 Audio Collection</h4>
-    <p><em>Family audio recordings and oral histories will be organized here</em></p>
-    <div style="margin: 1rem 0;">
-        <i class="fas fa-microphone" style="font-size: 3rem; color: #6c757d;"></i>
-    </div>
-    <p>Currently digitizing and preserving our family's audio heritage</p>
-    <p><strong>Listen for Updates!</strong></p>
-</div> 
+*Every voice tells a story. Help us preserve the soundtrack of our family's journey.* 
