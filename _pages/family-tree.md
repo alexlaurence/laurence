@@ -6,6 +6,12 @@ description: Tracing our ancestral roots and connections across generations
 nav: true
 nav_order: 2
 ---
+
+# The Laurence Family Tree
+Tracing our ancestral roots and connections across generations
+
+---
+
   <div id="FamilyChart" class="f3" style="width:100%;height:900px;margin:auto;background-color:rgb(33,33,33);color:#fff;"></div>
   <link rel="stylesheet" href="https://unpkg.com/family-chart@0.4.5/dist/styles/family-chart.css">
   <script src="https://unpkg.com/d3@6"></script>
@@ -307,17 +313,7 @@ nav_order: 2
 
   </script>
 
-# The Laurence Family Tree
-
-## Coming Soon
-
-This section will include:
-
-- **Interactive family tree** - Navigate through generations of Laurence family members
-- **Ancestral lineages** - Detailed genealogical charts showing our family's origins
-- **Biographical profiles** - Stories and information about family members past and present
-- **Timeline of generations** - Historical context for each branch of the family
-- **Geographic origins** - Maps showing where our ancestors lived and traveled
+---
 
 ## How to Contribute
 
