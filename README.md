@@ -25,7 +25,7 @@ It's a living project—meant to grow as our family grows. Everyone is welcome t
 
 - **Online:** Visit our family archive at:
 
-  `https://alexlaurence.github.io/laurence/people/`
+  `https://alexlaurence.github.io/laurence/`
 
 ---
 
@@ -59,7 +59,7 @@ It's a living project—meant to grow as our family grows. Everyone is welcome t
      - Download GitHub Desktop (desktop.github.com), install it, and log-in.
      - Clone your forked repository (not this repository) by clicking the green button on your repository page, and click Open with Github desktop.
      - Now you should have your files on your PC for editing.
-     
+
    4. Updating the Archive
      - Whenever you want to update the site, use Github pages to "push" the changes back to your repository. To do this:
        - Make the changes to the files on your computer
