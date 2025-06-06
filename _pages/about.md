@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: <em>Scientia sit potentia</em> - Knowledge is power
 

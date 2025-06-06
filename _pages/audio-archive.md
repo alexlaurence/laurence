@@ -1,117 +1,337 @@
 ---
 layout: page
-title: audio archive
+title: Audio Archive
 permalink: /audio-archive/
-description: Capturing voices, stories, and sounds from our family's history
-nav: true
+description: 
+nav: false
 nav_order: 4
 ---
 
-<div class="audio-archive-placeholder" style="text-align: center; margin: 2rem 0; padding: 3rem; background-color: #f8f9fa; border: 2px dashed #dee2e6; border-radius: 8px;">
-    <h4>🎧 Audio Collection</h4>
-    <p><em>Family audio recordings and oral histories will be organized here</em></p>
-    <div style="margin: 1rem 0;">
-        <i class="fas fa-microphone" style="font-size: 3rem; color: #6c757d;"></i>
-    </div>
-    <p>Currently digitizing and preserving our family's audio heritage</p>
-    <p><strong>Listen for Updates!</strong></p>
+# The Laurence Family Audio Archive
+Capturing voices, stories, and sounds from our family's history
+
+---
+
+<!-- Search Bar -->
+<div style="width: 100%; margin: 2rem 0 1.5rem 0; text-align: center;">
+  <input id="audioSearchInput" type="text" placeholder="Search audio..." style="width: 100%; padding: 0.7rem 1rem; font-size: 1.1rem; border-radius: 8px; border: 1px solid #ccc;">
 </div>
 
-# The Laurence Family Audio Archive
+<!-- Netflix-style Audio Gallery by Category with Carousel -->
+<div class="audio-gallery-section">
 
-*Preserving the voices and stories that connect us across generations.*
 
-## Archive Mission
+  <!-- Oral Histories -->
+  <h3 style="margin-top:2rem;">🎙️ Oral Histories</h3>
+  <div class="category-desc" style="color:#666; font-size:0.98rem; margin-bottom:0.2rem;">
+    Life story interviews, personal accounts of history, immigration stories, career narratives, and childhood memories from family elders.
+  </div>
+  <div class="carousel-row">
+    <button class="carousel-arrow left" aria-label="Scroll left">&#8592;</button>
+    <div class="audio-carousel" data-category="oral-histories">
+      <div class="audio-cover" data-title="Grandma's Life Story" data-description="An in-depth interview with Grandma about her childhood and family origins." data-audio="audio1.mp3" data-tags="grandma,oral history,life story,interview,elders,origins">
+        <div class="cover-blank">Grandma's Life Story</div>
+      </div>
+      <!-- Add more Oral Histories covers here -->
+    </div>
+    <button class="carousel-arrow right" aria-label="Scroll right">&#8594;</button>
+  </div>
 
-This audio collection captures the irreplaceable voices of our family members, preserving not just their words but the warmth, laughter, and emotion that written records cannot convey. From formal interviews to casual conversations, these recordings form an intimate connection to our family's past and present.
+  <!-- Family Conversations -->
+  <h3 style="margin-top:2rem;">📞 Family Conversations</h3>
+  <div class="category-desc" style="color:#666; font-size:0.98rem; margin-bottom:0.2rem;">
+    Holiday phone calls, casual discussions, children's voices, family traditions, and spontaneous laughter—capturing the sound of family life.
+  </div>
+  <div class="carousel-row">
+    <button class="carousel-arrow left" aria-label="Scroll left">&#8592;</button>
+    <div class="audio-carousel" data-category="family-conversations">
+      <div class="audio-cover" data-title="Holiday Phone Call 2002" data-description="A joyful holiday phone call with relatives across the country." data-audio="audio2.mp3" data-tags="holiday,phone call,2002,conversation,relatives">
+        <div class="cover-blank">Holiday Phone Call 2002</div>
+      </div>
+      <!-- Add more Family Conversations covers here -->
+    </div>
+    <button class="carousel-arrow right" aria-label="Scroll right">&#8594;</button>
+  </div>
 
-## Collection Highlights
+  <!-- Musical Heritage -->
+  <h3 style="margin-top:2rem;">🎵 Musical Heritage</h3>
+  <div class="category-desc" style="color:#666; font-size:0.98rem; margin-bottom:0.2rem;">
+    Family members singing, playing instruments, traditional songs, musical performances, and lullabies—our family's musical legacy.
+  </div>
+  <div class="carousel-row">
+    <button class="carousel-arrow left" aria-label="Scroll left">&#8592;</button>
+    <div class="audio-carousel" data-category="musical-heritage">
+      <div class="audio-cover" data-title="Family Band Performance" data-description="A recording of the family band playing at the 1995 reunion." data-audio="audio3.mp3" data-tags="family band,performance,1995,reunion,music,heritage">
+        <div class="cover-blank">Family Band Performance</div>
+      </div>
+      <!-- Add more Musical Heritage covers here -->
+    </div>
+    <button class="carousel-arrow right" aria-label="Scroll right">&#8594;</button>
+  </div>
 
-### 🎙️ Oral Histories
-- Life story interviews with family elders
-- Personal accounts of historical events
-- Immigration and family origin stories
-- Career and achievement narratives
-- Childhood memories and experiences
+  <!-- Historical Recordings -->
+  <h3 style="margin-top:2rem;">📻 Historical Recordings</h3>
+  <div class="category-desc" style="color:#666; font-size:0.98rem; margin-bottom:0.2rem;">
+    Radio broadcasts, news events, speeches, ceremonies, and anniversary recordings—audio snapshots of our family's place in history.
+  </div>
+  <div class="carousel-row">
+    <button class="carousel-arrow left" aria-label="Scroll left">&#8592;</button>
+    <div class="audio-carousel" data-category="historical-recordings">
+      <div class="audio-cover" data-title="Radio Broadcast 1969" data-description="A radio news broadcast from the day of the moon landing." data-audio="audio4.mp3" data-tags="radio,broadcast,1969,moon landing,history,news">
+        <div class="cover-blank">Radio Broadcast 1969</div>
+      </div>
+      <!-- Add more Historical Recordings covers here -->
+    </div>
+    <button class="carousel-arrow right" aria-label="Scroll right">&#8594;</button>
+  </div>
+</div>
 
-### 📞 Family Conversations
-- Holiday phone calls with distant relatives
-- Casual family discussions
-- Children's voices at different ages
-- Family traditions being explained
-- Spontaneous conversations and laughter
+<!-- Modal for audio details -->
+<div id="audioModal" class="audio-modal" style="display:none;">
+  <div class="audio-modal-content">
+    <span class="audio-modal-close">&times;</span>
+    <h3 id="modalTitle">Audio Title</h3>
+    <p id="modalDescription">Audio description goes here.</p>
+    <button id="modalPlayBtn" style="margin-top:1rem; padding:0.5rem 1.5rem; font-size:1rem;">▶ Play</button>
+  </div>
+</div>
 
-### 🎵 Musical Heritage
-- Family members singing or playing instruments
-- Traditional songs passed down through generations
-- Recordings from family musical performances
-- Cultural music that shaped our heritage
-- Lullabies and children's songs
+<style>
+.carousel-row {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0 2.5rem 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.audio-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.audio-cover {
+  flex: 0 0 160px;
+  width: 160px;
+  height: 160px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  display: flex;
+  align-items: flex-end;
+}
+.audio-cover:hover {
+  transform: scale(1.05);
+}
+.cover-blank {
+  background: linear-gradient(135deg, #e0e0e0 60%, #bdbdbd 100%);
+  border-radius: 12px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #555;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  text-align: center;
+}
+.carousel-arrow {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  font-size: 1.5rem;
+  color: #888;
+  cursor: pointer;
+  margin: 0 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  transition: background 0.2s, color 0.2s;
+  z-index: 2;
+}
+.carousel-arrow:hover {
+  background: #e50914;
+  color: #fff;
+}
+.carousel-arrow[disabled] {
+  opacity: 0.3;
+  pointer-events: none;
+}
+.audio-modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.audio-modal-content {
+  background: #fff;
+  border-radius: 10px;
+  padding: 2rem 2.5rem;
+  max-width: 400px;
+  width: 90vw;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  position: relative;
+  text-align: center;
+}
+.audio-modal-close {
+  position: absolute;
+  top: 1rem; right: 1.2rem;
+  font-size: 2rem;
+  color: #888;
+  cursor: pointer;
+}
+#audioModal #modalPlayBtn {
+  background: #e50914;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#audioModal #modalPlayBtn:hover {
+  background: #b00610;
+}
+@media (max-width: 600px) {
+  .audio-cover {
+    flex: 0 0 90px;
+    width: 90px;
+    height: 90px;
+  }
+}
+.category-desc {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+</style>
 
-### 📻 Historical Recordings
-- Radio broadcasts from significant dates
-- News events that affected our family
-- Speeches and ceremonies family members attended
-- Recorded messages and audio letters
-- Anniversary and celebration recordings
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Modal logic
+  const covers = document.querySelectorAll('.audio-cover');
+  const modal = document.getElementById('audioModal');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalDescription = document.getElementById('modalDescription');
+  const modalPlayBtn = document.getElementById('modalPlayBtn');
+  const modalClose = document.querySelector('.audio-modal-close');
+  let currentAudio = null;
 
-## Coming Soon
+  covers.forEach(cover => {
+    cover.addEventListener('click', function() {
+      modalTitle.textContent = cover.getAttribute('data-title');
+      modalDescription.textContent = cover.getAttribute('data-description');
+      currentAudio = cover.getAttribute('data-audio');
+      modal.style.display = 'flex';
+    });
+  });
 
-We are digitizing and cataloguing our audio collection to include:
+  modalClose.addEventListener('click', function() {
+    modal.style.display = 'none';
+  });
 
-- **Interactive audio player** - Listen with enhanced controls and quality
-- **Searchable transcripts** - Find specific topics and quotes
-- **Timeline organization** - Browse recordings by decade and era
-- **Speaker identification** - Know who is speaking at any moment
-- **Download capabilities** - Save recordings for personal archives
+  window.addEventListener('click', function(event) {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
 
-## Preservation Process
+  modalPlayBtn.addEventListener('click', function() {
+    alert('Playing: ' + (modalTitle.textContent || 'Audio'));
+    // Here you could embed an audio player or redirect to an audio page
+  });
 
-### 🔧 Technical Restoration
-- Professional digitization of vintage recordings
-- Noise reduction and audio enhancement
-- Format conversion to modern standards
-- Backup and redundancy for security
-- Metadata tagging for organization
+  // Responsive carousel arrow logic
+  function updateCarouselArrows() {
+    document.querySelectorAll('.carousel-row').forEach(function(row) {
+      const carousel = row.querySelector('.audio-carousel');
+      const leftArrow = row.querySelector('.carousel-arrow.left');
+      const rightArrow = row.querySelector('.carousel-arrow.right');
+      if (!carousel || !leftArrow || !rightArrow) return;
+      const scrollWidth = carousel.scrollWidth;
+      const clientWidth = carousel.clientWidth;
+      if (scrollWidth > clientWidth + 2) {
+        leftArrow.style.display = '';
+        rightArrow.style.display = '';
+      } else {
+        leftArrow.style.display = 'none';
+        rightArrow.style.display = 'none';
+      }
+    });
+  }
+  updateCarouselArrows();
+  window.addEventListener('resize', updateCarouselArrows);
 
-### 📋 Documentation
-Each recording includes:
-- Date and location of recording
-- Names of speakers/participants
-- Context and background information
-- Transcription where possible
-- Related photos or documents
+  // Carousel scroll logic
+  document.querySelectorAll('.carousel-row').forEach(function(row) {
+    const carousel = row.querySelector('.audio-carousel');
+    const leftArrow = row.querySelector('.carousel-arrow.left');
+    const rightArrow = row.querySelector('.carousel-arrow.right');
+    if (!carousel || !leftArrow || !rightArrow) return;
+    leftArrow.addEventListener('click', function() {
+      const cover = carousel.querySelector('.audio-cover');
+      let scrollAmount = cover ? cover.offsetWidth + 24 : 160;
+      carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+    rightArrow.addEventListener('click', function() {
+      const cover = carousel.querySelector('.audio-cover');
+      let scrollAmount = cover ? cover.offsetWidth + 24 : 160;
+      carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+    carousel.addEventListener('scroll', function() {
+      // Could add logic to disable arrows if at start/end
+    });
+  });
+
+  // Audio search filter
+  const searchInput = document.getElementById('audioSearchInput');
+  searchInput.addEventListener('input', function() {
+    const query = searchInput.value.trim().toLowerCase();
+    let anyVisible = false;
+    document.querySelectorAll('.carousel-row').forEach(function(row) {
+      const carousel = row.querySelector('.audio-carousel');
+      let covers = carousel ? carousel.querySelectorAll('.audio-cover') : [];
+      let visibleCount = 0;
+      covers.forEach(function(cover) {
+        const title = cover.getAttribute('data-title') || '';
+        const description = cover.getAttribute('data-description') || '';
+        const tags = cover.getAttribute('data-tags') || '';
+        const match = title.toLowerCase().includes(query) || description.toLowerCase().includes(query) || tags.toLowerCase().includes(query);
+        cover.style.display = match ? '' : 'none';
+        if (match) visibleCount++;
+      });
+      // Hide carousel row if no visible covers
+      row.style.display = (visibleCount > 0) ? '' : 'none';
+      if (visibleCount > 0) anyVisible = true;
+    });
+    // Optionally, show a message if no results
+    // (not implemented here for simplicity)
+  });
+});
+</script>
 
 ## How to Contribute
 
-### 📱 New Recordings
-- Record interviews with family members
-- Capture family gatherings and conversations
-- Document family stories and traditions
-- Share voicemails and audio messages
+We welcome contributions to our family audio archive in several ways. For new recordings, we encourage you to conduct interviews with family members, capture meaningful conversations at gatherings, document our stories and traditions, and share significant voicemails or audio messages.
 
-### 🏺 Historical Audio
-We can digitize:
-- Cassette tapes
-- Reel-to-reel recordings
-- Vinyl records with family significance
-- Answering machine messages
-- Audio CDs and other formats
+For historical audio content, we offer digitization services for a variety of formats. We can convert cassette tapes, reel-to-reel recordings, vinyl records containing family-related content, old answering machine messages, audio CDs, and other legacy formats into digital files for preservation.
 
-### 📝 Recording Guidelines
-For best quality:
-- **Format**: WAV, MP3, M4A accepted
-- **Quality**: High bitrate preferred (256kbps or higher)
-- **Environment**: Quiet location for clarity
-- **Equipment**: Use good microphones when possible
-- **Length**: Any duration welcome
+To ensure the highest quality recordings, we recommend using WAV, MP3, or M4A formats at high bitrates (256kbps or higher). When making new recordings, choose a quiet environment for optimal clarity and use quality microphones when possible. Recordings of any length are welcome in our archive.
 
-## Privacy and Access
-
-- Recordings are shared only with approved family members
-- Sensitive content is handled with discretion
-- Contributors maintain rights to their recordings
-- Access levels can be customized per recording
+We take privacy seriously in managing these precious family memories. All recordings are only shared with approved family members, and we handle sensitive content with appropriate discretion. Contributors retain rights to their recordings, and we can customize access levels for individual items to ensure proper privacy controls.
 
 ---
 

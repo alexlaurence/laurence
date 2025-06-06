@@ -1,10 +1,10 @@
 ---
 layout: page
-title: family tree
+title: Family Tree
 permalink: /family-tree/
-description: Tracing our ancestral roots and connections across generations
+description: 
 nav: true
-nav_order: 2
+nav_order: 3
 ---
 
 # The Laurence Family Tree
@@ -13,9 +13,9 @@ Tracing our ancestral roots and connections across generations
 ---
 
   <div id="FamilyChart" class="f3" style="width:100%;height:900px;margin:auto;background-color:rgb(33,33,33);color:#fff;"></div>
-  <link rel="stylesheet" href="https://unpkg.com/family-chart@0.4.5/dist/styles/family-chart.css">
   <script src="https://unpkg.com/d3@6"></script>
   <script type="module" src="https://unpkg.com/family-chart@0.4.5"></script>
+  <link rel="stylesheet" href="https://unpkg.com/family-chart@0.4.5/dist/styles/family-chart.css">
   <script type="module">
     
     create(data())
@@ -37,6 +37,8 @@ Tracing our ancestral roots and connections across generations
         .setMiniTree(true)
         .setStyle('rect')
         .setOnHoverPathToMain()
+    
+      f3Chart.updateTree({initial: true})
     }
     
     function data() {

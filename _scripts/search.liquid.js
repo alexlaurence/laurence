@@ -326,4 +326,61 @@ ninja.data = [
       },
     },
   {%- endif -%}
+  { // Video Archive Items
+    id: "video-archive-family-reunion-1998",
+    title: "Family Reunion 1998",
+    description: "A heartwarming look back at the 1998 family reunion in the old backyard.",
+    section: "Videos",
+    handler: () => { window.location.href = "/video-archive/#play-family-reunion-1998"; },
+  },
+  {
+    id: "video-archive-holiday-dinner",
+    title: "Holiday Dinner",
+    description: "The whole family gathers for a festive holiday meal.",
+    section: "Videos",
+    handler: () => { window.location.href = "/video-archive/#play-holiday-dinner"; },
+  },
+  {
+    id: "video-archive-summer-vacation",
+    title: "Summer Vacation",
+    description: "Fun times at the lake during the summer of 2005.",
+    section: "Videos",
+    handler: () => { window.location.href = "/video-archive/#play-summer-vacation"; },
+  },
+  {
+    id: "video-archive-grandpas-stories",
+    title: "Grandpa's Stories",
+    description: "Grandpa shares tales from his youth and family history.",
+    section: "Videos",
+    handler: () => { window.location.href = "/video-archive/#play-grandpas-stories"; },
+  },
+  // Audio Archive Items
+  {
+    id: "audio-archive-grandmas-life-story",
+    title: "Grandma's Life Story",
+    description: "An in-depth interview with Grandma about her childhood and family origins.",
+    section: "Audio",
+    handler: () => { window.location.href = "/audio-archive/#oral-histories"; },
+  },
+  {
+    id: "audio-archive-holiday-phone-call-2002",
+    title: "Holiday Phone Call 2002",
+    description: "A joyful holiday phone call with relatives across the country.",
+    section: "Audio",
+    handler: () => { window.location.href = "/audio-archive/#family-conversations"; },
+  },
+  {
+    id: "audio-archive-family-band-performance",
+    title: "Family Band Performance",
+    description: "A recording of the family band playing at the 1995 reunion.",
+    section: "Audio",
+    handler: () => { window.location.href = "/audio-archive/#musical-heritage"; },
+  },
+  {
+    id: "audio-archive-radio-broadcast-1969",
+    title: "Radio Broadcast 1969",
+    description: "A radio news broadcast from the day of the moon landing.",
+    section: "Audio",
+    handler: () => { window.location.href = "/audio-archive/#historical-recordings"; },
+  },
 ];

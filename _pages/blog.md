@@ -1,9 +1,9 @@
 ---
 layout: default
 permalink: /family-news/
-title: family news
+title: Family News
 nav: true
-nav_order: 5
+nav_order: 2
 pagination:
   enabled: true
   collection: posts
