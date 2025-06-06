@@ -8,7 +8,7 @@ nav_order: 7
 
 profiles:
   - align: right
-    image: images/AlexanderAdamLaurence.JPG
+    image: AlexanderAdamLaurence.JPG
     image_circular: false
     name: Alexander Adam Laurence
     more_info: >
@@ -18,7 +18,7 @@ profiles:
       <h2>Alexander Adam Laurence</h2>
       <p>Alexander is one of the founders of the Laurence family and the family archive. His vision and dedication to preserving family history have been instrumental in creating this digital legacy for future generations.</p>
   - align: left
-    image: images/RinoLaurence.JPG
+    image: RinoLaurence.JPG
     image_circular: false
     name: Rino Laurence
     more_info: >
