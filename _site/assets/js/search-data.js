@@ -44,6 +44,20 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/laurence/audio-archive/";
               },
+            },{id: "dropdown-image-archive",
+              title: "Image Archive",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/laurence/image-archive/";
+              },
+            },{id: "dropdown-document-archive",
+              title: "Document Archive",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/laurence/document-archive/";
+              },
             },{id: "post-creating-family-photo-galleries",
         
           title: "Creating Family Photo Galleries",

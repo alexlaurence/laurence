@@ -238,6 +238,55 @@ If you want to add a new audio recording (such as an interview, oral history, or
 
 If you want to automate or further enhance this process (e.g., with thumbnails or a CMS), ask Alexander or another technical family member for help!
 
+## How to Add a New Photo Album to the Archive
+
+If you want to add a new photo album to the archive yourself, follow these steps:
+
+1. **Prepare your image files:**
+   - Convert your images to `.jpg`, `.jpeg`, or `.png` format for best compatibility.
+   - Place all the images for your album in the `assets/img/` folder (create this folder if it doesn't exist).
+   - Example: `assets/img/family-reunion-1998-1.jpg`, `assets/img/family-reunion-1998-2.jpg`, `assets/img/family-reunion-1998-3.jpg`
+
+2. **Add an album entry to the archive page:**
+   - Open the file `_pages/image-archive.md` in a text editor.
+   - Find the section for the correct category (Family Events, Portraits, etc.).
+   - Add a new block like this inside the appropriate `<div class="album-carousel" ...>`:
+     ```html
+     <div class="album-card"
+          data-title="Family Reunion 1998"
+          data-description="A heartwarming look back at the 1998 family reunion in the old backyard."
+          data-cover="family-reunion-1998-1.jpg"
+          data-images='["family-reunion-1998-1.jpg","family-reunion-1998-2.jpg","family-reunion-1998-3.jpg"]'
+          data-tags="reunion,1998,backyard,family event,celebration">
+       <img src="/assets/img/family-reunion-1998-1.jpg" alt="Family Reunion 1998" class="album-thumb"/>
+       <div class="album-title">Family Reunion 1998</div>
+     </div>
+     ```
+   - **data-title**: The display title of the album (e.g., "Family Reunion 1998").
+   - **data-description**: A short description of the album.
+   - **data-cover**: The filename of the cover image (should match one of the images in the album).
+   - **data-images**: A JSON array of all image filenames in the album (use double quotes inside the array, as shown above).
+   - **data-tags**: Comma-separated keywords for search (include year, event type, people, location, etc.).
+   - The `<img ...>` tag displays the album cover in the gallery.
+
+3. **Test your addition:**
+   - Run the site locally (see instructions above).
+   - Search for your album using the search bar.
+   - Click the album card to open the popup and verify the images, title, description, and tags.
+   - Click any image in the popup to open the full-size image in a new tab.
+
+4. **Commit and push your changes:**
+   - After confirming everything works, save your changes and upload them to the repository.
+
+**Summary Checklist:**
+- [ ] Place all album images in the `assets/img/` folder
+- [ ] Add a `<div class="album-card" ...>` block in `_pages/image-archive.md` under the correct category
+- [ ] Fill in `data-title`, `data-description`, `data-cover`, `data-images`, and `data-tags`
+- [ ] Test locally
+- [ ] Commit and push your changes
+
+If you want to automate or further enhance this process (e.g., with automatic thumbnails or a CMS), ask Alexander or another technical family member for help!
+
 ---
 
 ## Privacy & Family-Only Use

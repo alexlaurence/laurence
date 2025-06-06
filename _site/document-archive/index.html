@@ -17,7 +17,7 @@
   
   
     
-      Video Archive | Laurence Family Archive
+      Document Archive | Laurence Family Archive
     
   
 </title>
@@ -60,7 +60,7 @@
   <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%8F%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
 
 <link rel="stylesheet" href="/laurence/assets/css/main.css?d41d8cd98f00b204e9800998ecf8427e">
-<link rel="canonical" href="http://localhost:4000/laurence/video-archive/">
+<link rel="canonical" href="http://localhost:4000/laurence/document-archive/">
 
 <!-- Dark Mode -->
 <script src="/laurence/assets/js/theme.js?a81d82887dd692e91686b43de4542f18"></script>
@@ -114,8 +114,6 @@
 
           <!-- Other pages -->
           
-          
-            
           
             
           
@@ -249,7 +247,7 @@
                   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                     
                       
-                        <a class="dropdown-item active" href="/laurence/video-archive/">Video Archive</a>
+                        <a class="dropdown-item " href="/laurence/video-archive/">Video Archive</a>
                       
                     
                       
@@ -261,7 +259,7 @@
                       
                     
                       
-                        <a class="dropdown-item " href="/laurence/document-archive/">Document Archive</a>
+                        <a class="dropdown-item active" href="/laurence/document-archive/">Document Archive</a>
                       
                     
                   </div>
@@ -313,92 +311,97 @@
   </header>
 
   <article>
-    <h1 id="the-laurence-family-video-archive">The Laurence Family Video Archive</h1>
-<p>Preserving precious family moments and memories in motion</p>
+    <h1 id="the-laurence-family-document-archive">The Laurence Family Document Archive</h1>
+<p>Preserving our family’s important papers, certificates, and keepsakes</p>
 
 <hr>
 
 <!-- Search Bar -->
 <div style="width: 100%; margin: 2rem 0 1.5rem 0; text-align: center;">
-  <input id="videoSearchInput" type="text" placeholder="Search videos..." style="width: 100%; padding: 0.7rem 1rem; font-size: 1.1rem; border-radius: 8px; border: 1px solid #ccc;">
+  <input id="documentSearchInput" type="text" placeholder="Search documents..." style="width: 100%; padding: 0.7rem 1rem; font-size: 1.1rem; border-radius: 8px; border: 1px solid #ccc;">
 </div>
 
-<!-- Netflix-style Video Gallery by Category with Carousel -->
-<div class="video-gallery-section">
+<!-- Document Gallery by Category with Carousel -->
+<div class="document-gallery-section">
 
-
-  <!-- Family Events -->
-  <h3 style="margin-top:2rem;">📹 Family Events</h3>
+  <!-- Certificates & Awards -->
+  <h3 style="margin-top:2rem;">📜 Certificates &amp; Awards</h3>
   <div class="category-desc" style="color:#666; font-size:0.98rem; margin-bottom:0.2rem;">
-    Weddings, celebrations, holiday gatherings, birthdays, graduations, and family reunions—cherished moments from our most important events.
+    Diplomas, degrees, awards, and certificates of achievement.
   </div>
   <div class="carousel-row">
     <button class="carousel-arrow left" aria-label="Scroll left">←</button>
-    <div class="video-carousel" data-category="family-events">
-      <div class="video-poster" data-title="Family Reunion 1998" data-synopsis="A heartwarming look back at the 1998 family reunion in the old backyard." data-video="video1.mp4" data-tags="reunion,1998,backyard,family event,celebration">
-        <div class="poster-blank">Family Reunion 1998</div>
+    <div class="document-carousel" data-category="certificates-awards">
+      <!-- Example document card -->
+      <div class="document-card" data-title="High School Diploma" data-description="Alexander's high school diploma, 2002." data-image="certificate1.jpg" data-tags="diploma,certificate,school,2002,award">
+        <img src="/assets/img/certificate1.jpg" alt="High School Diploma" class="document-thumb">
+        <div class="document-title">High School Diploma</div>
       </div>
-      <div class="video-poster" data-title="Holiday Dinner" data-synopsis="The whole family gathers for a festive holiday meal." data-video="video4.mp4" data-tags="holiday,dinner,celebration,family event,meal">
-        <div class="poster-blank">Holiday Dinner</div>
-      </div>
-      <!-- Add more Family Events posters here -->
+      <!-- Add more Certificates & Awards documents here -->
     </div>
     <button class="carousel-arrow right" aria-label="Scroll right">→</button>
   </div>
 
-  <!-- Home Movies -->
-  <h3 style="margin-top:2rem;">🏠 Home Movies</h3>
+  <!-- Letters & Correspondence -->
+  <h3 style="margin-top:2rem;">✉️ Letters &amp; Correspondence</h3>
   <div class="category-desc" style="color:#666; font-size:0.98rem; margin-bottom:0.2rem;">
-    Everyday family life, children growing up, pets, vacations, and candid moments—capturing the heart of home.
+    Family letters, postcards, and personal correspondence.
   </div>
   <div class="carousel-row">
     <button class="carousel-arrow left" aria-label="Scroll left">←</button>
-    <div class="video-carousel" data-category="home-movies">
-      <div class="video-poster" data-title="Summer Vacation" data-synopsis="Fun times at the lake during the summer of 2005." data-video="video3.mp4" data-tags="summer,vacation,2005,lake,home movie,travel">
-        <div class="poster-blank">Summer Vacation</div>
-      </div>
-      <!-- Add more Home Movies posters here -->
+    <div class="document-carousel" data-category="letters-correspondence">
+      <!-- Add Letters & Correspondence documents here -->
     </div>
     <button class="carousel-arrow right" aria-label="Scroll right">→</button>
   </div>
 
-  <!-- Oral Histories -->
-  <h3 style="margin-top:2rem;">🎤 Oral Histories</h3>
+  <!-- Legal & Official Documents -->
+  <h3 style="margin-top:2rem;">📑 Legal &amp; Official Documents</h3>
   <div class="category-desc" style="color:#666; font-size:0.98rem; margin-bottom:0.2rem;">
-    Interviews with family elders, stories, traditions, and personal testimonies—wisdom and memories passed down.
+    Birth certificates, marriage licenses, immigration papers, and other official records.
   </div>
   <div class="carousel-row">
     <button class="carousel-arrow left" aria-label="Scroll left">←</button>
-    <div class="video-carousel" data-category="oral-histories">
-      <div class="video-poster" data-title="Grandpa's Stories" data-synopsis="Grandpa shares tales from his youth and family history." data-video="video2.mp4" data-tags="grandpa,oral history,stories,elders,interview">
-        <div class="poster-blank">Grandpa's Stories</div>
-      </div>
-      <!-- Add more Oral Histories posters here -->
+    <div class="document-carousel" data-category="legal-official">
+      <!-- Add Legal & Official Documents here -->
     </div>
     <button class="carousel-arrow right" aria-label="Scroll right">→</button>
   </div>
 
-  <!-- Educational Content -->
-  <h3 style="margin-top:2rem;">📚 Educational Content</h3>
+  <!-- Heirlooms & Keepsakes -->
+  <h3 style="margin-top:2rem;">🏺 Heirlooms &amp; Keepsakes</h3>
   <div class="category-desc" style="color:#666; font-size:0.98rem; margin-bottom:0.2rem;">
-    Family history presentations, genealogy research, historical context, and cultural heritage explained.
+    Scans or photos of treasured family artifacts, heirlooms, and keepsakes.
   </div>
   <div class="carousel-row">
     <button class="carousel-arrow left" aria-label="Scroll left">←</button>
-    <div class="video-carousel" data-category="educational-content">
-      <!-- Add Educational Content posters here -->
+    <div class="document-carousel" data-category="heirlooms-keepsakes">
+      <!-- Add Heirlooms & Keepsakes here -->
+    </div>
+    <button class="carousel-arrow right" aria-label="Scroll right">→</button>
+  </div>
+
+  <!-- Miscellaneous -->
+  <h3 style="margin-top:2rem;">🗂️ Miscellaneous</h3>
+  <div class="category-desc" style="color:#666; font-size:0.98rem; margin-bottom:0.2rem;">
+    Other important or interesting documents that don't fit the above categories.
+  </div>
+  <div class="carousel-row">
+    <button class="carousel-arrow left" aria-label="Scroll left">←</button>
+    <div class="document-carousel" data-category="miscellaneous">
+      <!-- Add Miscellaneous documents here -->
     </div>
     <button class="carousel-arrow right" aria-label="Scroll right">→</button>
   </div>
 </div>
 
-<!-- Modal for video details -->
-<div id="videoModal" class="video-modal" style="display:none;">
-  <div class="video-modal-content">
-    <span class="video-modal-close">×</span>
-    <h3 id="modalTitle">Video Title</h3>
-    <p id="modalSynopsis">Video synopsis goes here.</p>
-    <button id="modalPlayBtn" style="margin-top:1rem; padding:0.5rem 1.5rem; font-size:1rem;">▶ Play</button>
+<!-- Modal for document details -->
+<div id="documentModal" class="document-modal" style="display:none;">
+  <div class="document-modal-content">
+    <span class="document-modal-close">×</span>
+    <img id="modalDocumentImage" src="" alt="Document" style="max-width:100%; max-height:350px; border-radius:10px; margin-bottom:1rem;">
+    <h3 id="modalDocumentTitle">Document Title</h3>
+    <p id="modalDocumentDescription">Document description goes here.</p>
   </div>
 </div>
 
@@ -411,7 +414,7 @@
   max-width: 100%;
   box-sizing: border-box;
 }
-.video-carousel {
+.document-carousel {
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
@@ -422,32 +425,34 @@
   max-width: 100%;
   box-sizing: border-box;
 }
-.video-poster {
+.document-card {
   flex: 0 0 180px;
   width: 180px;
-  height: 260px;
+  height: 220px;
   cursor: pointer;
   transition: transform 0.2s;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
 }
-.video-poster:hover {
+.document-card:hover {
   transform: scale(1.05);
 }
-.poster-blank {
-  background: linear-gradient(135deg, #e0e0e0 60%, #bdbdbd 100%);
-  border-radius: 12px;
+.document-thumb {
   width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  font-size: 1.1rem;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  margin-bottom: 0.5rem;
+}
+.document-title {
+  font-size: 1.08rem;
   font-weight: 600;
   color: #555;
-  padding: 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
   text-align: center;
+  margin-bottom: 0.5rem;
 }
 .carousel-arrow {
   background: #fff;
@@ -474,7 +479,7 @@
   opacity: 0.3;
   pointer-events: none;
 }
-.video-modal {
+.document-modal {
   position: fixed;
   z-index: 1000;
   left: 0; top: 0; width: 100vw; height: 100vh;
@@ -483,7 +488,7 @@
   align-items: center;
   justify-content: center;
 }
-.video-modal-content {
+.document-modal-content {
   background: #fff;
   border-radius: 10px;
   padding: 2rem 2.5rem;
@@ -493,29 +498,21 @@
   position: relative;
   text-align: center;
 }
-.video-modal-close {
+.document-modal-close {
   position: absolute;
   top: 1rem; right: 1.2rem;
   font-size: 2rem;
   color: #888;
   cursor: pointer;
 }
-#modalPlayBtn {
-  background: #e50914;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-#modalPlayBtn:hover {
-  background: #b00610;
-}
 @media (max-width: 600px) {
-  .video-poster {
-    flex: 0 0 130px;
-    width: 130px;
-    height: 180px;
+  .document-card {
+    flex: 0 0 110px;
+    width: 110px;
+    height: 130px;
+  }
+  .document-thumb {
+    height: 70px;
   }
 }
 .category-desc {
@@ -527,48 +524,21 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  const posters = document.querySelectorAll('.video-poster');
-  const modal = document.getElementById('videoModal');
-  const modalTitle = document.getElementById('modalTitle');
-  const modalSynopsis = document.getElementById('modalSynopsis');
-  const modalPlayBtn = document.getElementById('modalPlayBtn');
-  const modalClose = document.querySelector('.video-modal-close');
-  let currentVideo = null;
+  const cards = document.querySelectorAll('.document-card');
+  const modal = document.getElementById('documentModal');
+  const modalTitle = document.getElementById('modalDocumentTitle');
+  const modalDescription = document.getElementById('modalDocumentDescription');
+  const modalImage = document.getElementById('modalDocumentImage');
+  const modalClose = document.querySelector('.document-modal-close');
 
-  function slugify(text) {
-    return text.toString().toLowerCase().replace(/\s+/g, '-')
-      .replace(/[^\w\-]+/g, '')
-      .replace(/\-\-+/g, '-')
-      .replace(/^-+/, '')
-      .replace(/-+$/, '');
-  }
-
-  posters.forEach(poster => {
-    poster.addEventListener('click', function() {
-      modalTitle.textContent = poster.getAttribute('data-title');
-      modalSynopsis.textContent = poster.getAttribute('data-synopsis');
-      currentVideo = poster.getAttribute('data-video');
+  cards.forEach(card => {
+    card.addEventListener('click', function() {
+      modalTitle.textContent = card.getAttribute('data-title');
+      modalDescription.textContent = card.getAttribute('data-description');
+      modalImage.src = '/assets/img/' + card.getAttribute('data-image');
       modal.style.display = 'flex';
     });
   });
-
-  // Play from hash if present
-  function playFromHash() {
-    if (window.location.hash.startsWith('#play-')) {
-      const slug = window.location.hash.replace('#play-', '');
-      let found = false;
-      posters.forEach(poster => {
-        const title = poster.getAttribute('data-title') || '';
-        if (slugify(title) === slug) {
-          poster.click();
-          found = true;
-        }
-      });
-      // Optionally, clear the hash after playing
-      // if (found) window.location.hash = '';
-    }
-  }
-  playFromHash();
 
   modalClose.addEventListener('click', function() {
     modal.style.display = 'none';
@@ -580,22 +550,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  modalPlayBtn.addEventListener('click', function() {
-    alert('Playing: ' + (modalTitle.textContent || 'Video'));
-    // Here you could embed a video player or redirect to a video page
-  });
-
   // Responsive carousel arrow logic
   function updateCarouselArrows() {
     document.querySelectorAll('.carousel-row').forEach(function(row) {
-      const carousel = row.querySelector('.video-carousel');
+      const carousel = row.querySelector('.document-carousel');
       const leftArrow = row.querySelector('.carousel-arrow.left');
       const rightArrow = row.querySelector('.carousel-arrow.right');
       if (!carousel || !leftArrow || !rightArrow) return;
-      // Calculate total scrollable width vs visible width
       const scrollWidth = carousel.scrollWidth;
       const clientWidth = carousel.clientWidth;
-      if (scrollWidth > clientWidth + 2) { // +2 for rounding errors
+      if (scrollWidth > clientWidth + 2) {
         leftArrow.style.display = '';
         rightArrow.style.display = '';
       } else {
@@ -604,79 +568,135 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
-
-  // Initial check
   updateCarouselArrows();
-  // Update on window resize
   window.addEventListener('resize', updateCarouselArrows);
-  // Update on content change (e.g., if you add posters dynamically)
-  // Optionally, you could use a MutationObserver for dynamic content
 
   // Carousel scroll logic
   document.querySelectorAll('.carousel-row').forEach(function(row) {
-    const carousel = row.querySelector('.video-carousel');
+    const carousel = row.querySelector('.document-carousel');
     const leftArrow = row.querySelector('.carousel-arrow.left');
     const rightArrow = row.querySelector('.carousel-arrow.right');
     if (!carousel || !leftArrow || !rightArrow) return;
     leftArrow.addEventListener('click', function() {
-      // Scroll by the width of one poster (plus gap)
-      const poster = carousel.querySelector('.video-poster');
-      let scrollAmount = poster ? poster.offsetWidth + 24 : 200; // 24px = gap
+      const card = carousel.querySelector('.document-card');
+      let scrollAmount = card ? card.offsetWidth + 24 : 180;
       carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
     });
     rightArrow.addEventListener('click', function() {
-      const poster = carousel.querySelector('.video-poster');
-      let scrollAmount = poster ? poster.offsetWidth + 24 : 200;
+      const card = carousel.querySelector('.document-card');
+      let scrollAmount = card ? card.offsetWidth + 24 : 180;
       carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     });
-    // Optional: update arrows on scroll (e.g., disable if at start/end)
     carousel.addEventListener('scroll', function() {
       // Could add logic to disable arrows if at start/end
     });
   });
 
-  // Video search filter
-  const searchInput = document.getElementById('videoSearchInput');
+  // Document search filter
+  const searchInput = document.getElementById('documentSearchInput');
   searchInput.addEventListener('input', function() {
     const query = searchInput.value.trim().toLowerCase();
     let anyVisible = false;
     document.querySelectorAll('.carousel-row').forEach(function(row) {
-      const carousel = row.querySelector('.video-carousel');
-      let posters = carousel ? carousel.querySelectorAll('.video-poster') : [];
+      const carousel = row.querySelector('.document-carousel');
+      let cards = carousel ? carousel.querySelectorAll('.document-card') : [];
       let visibleCount = 0;
-      posters.forEach(function(poster) {
-        const title = poster.getAttribute('data-title') || '';
-        const synopsis = poster.getAttribute('data-synopsis') || '';
-        const tags = poster.getAttribute('data-tags') || '';
-        const match = title.toLowerCase().includes(query) || synopsis.toLowerCase().includes(query) || tags.toLowerCase().includes(query);
-        poster.style.display = match ? '' : 'none';
+      cards.forEach(function(card) {
+        const title = card.getAttribute('data-title') || '';
+        const description = card.getAttribute('data-description') || '';
+        const tags = card.getAttribute('data-tags') || '';
+        const match = title.toLowerCase().includes(query) || description.toLowerCase().includes(query) || tags.toLowerCase().includes(query);
+        card.style.display = match ? '' : 'none';
         if (match) visibleCount++;
       });
-      // Hide carousel row if no visible posters
       row.style.display = (visibleCount > 0) ? '' : 'none';
       if (visibleCount > 0) anyVisible = true;
     });
     // Optionally, show a message if no results
-    // (not implemented here for simplicity)
   });
 });
 </script>
 
 <hr>
 
-<h2 id="contribution-guidelines">Contribution Guidelines</h2>
+<h2 id="how-to-add-a-new-document-to-the-archive">How to Add a New Document to the Archive</h2>
 
-<p>We welcome contributions to our comprehensive video archive from all family members. For modern digital content, we accept uploads of recent recordings from smartphones, digital cameras, and other devices, including both videos and photo-video combinations from recent family events.</p>
+<p>If you want to add a new document to the archive yourself, follow these steps:</p>
 
-<p>For historical content, we offer digitization services for older media formats. We can help convert old film reels, including 8mm, Super 8, and 16mm formats, as well as VHS tapes and other analog video formats. Please reach out to us to arrange transfer of any physical media.</p>
+<ol>
+  <li>
+<strong>Prepare your document scan or photo:</strong>
+    <ul>
+      <li>Convert your document to <code class="language-plaintext highlighter-rouge">.jpg</code>, <code class="language-plaintext highlighter-rouge">.jpeg</code>, or <code class="language-plaintext highlighter-rouge">.png</code> format for best compatibility.</li>
+      <li>Place the document image file in the <code class="language-plaintext highlighter-rouge">assets/img/</code> folder (create this folder if it doesn’t exist).</li>
+      <li>Example: <code class="language-plaintext highlighter-rouge">assets/img/certificate1.jpg</code>
+</li>
+    </ul>
+  </li>
+  <li>
+<strong>Add a document entry to the archive page:</strong>
+    <ul>
+      <li>Open the file <code class="language-plaintext highlighter-rouge">_pages/document-archive.md</code> in a text editor.</li>
+      <li>Find the section for the correct category (Certificates &amp; Awards, Letters &amp; Correspondence, etc.).</li>
+      <li>Add a new block like this inside the appropriate <code class="language-plaintext highlighter-rouge">&lt;div class="document-carousel" ...&gt;</code>:
+        <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"document-card"</span>
+     <span class="na">data-title=</span><span class="s">"High School Diploma"</span>
+     <span class="na">data-description=</span><span class="s">"Alexander's high school diploma, 2002."</span>
+     <span class="na">data-image=</span><span class="s">"certificate1.jpg"</span>
+     <span class="na">data-tags=</span><span class="s">"diploma,certificate,school,2002,award"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/assets/img/certificate1.jpg"</span> <span class="na">alt=</span><span class="s">"High School Diploma"</span> <span class="na">class=</span><span class="s">"document-thumb"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"document-title"</span><span class="nt">&gt;</span>High School Diploma<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>        </div>
+      </li>
+      <li>
+<strong>data-title</strong>: The display title of the document.</li>
+      <li>
+<strong>data-description</strong>: A short description of the document.</li>
+      <li>
+<strong>data-image</strong>: The filename of your document image (should match the file you placed in <code class="language-plaintext highlighter-rouge">assets/img/</code>).</li>
+      <li>
+<strong>data-tags</strong>: Comma-separated keywords for search (include year, type, people, location, etc.).</li>
+      <li>The <code class="language-plaintext highlighter-rouge">&lt;img ...&gt;</code> tag displays the document thumbnail in the gallery.</li>
+    </ul>
+  </li>
+  <li>
+<strong>Test your addition:</strong>
+    <ul>
+      <li>Run the site locally (see instructions above).</li>
+      <li>Search for your document using the search bar.</li>
+      <li>Click the document card to open the modal and verify the title, description, and tags.</li>
+    </ul>
+  </li>
+  <li>
+<strong>Commit and push your changes:</strong>
+    <ul>
+      <li>After confirming everything works, save your changes and upload them to the repository.</li>
+    </ul>
+  </li>
+</ol>
 
-<p>When submitting videos, we ask that you provide key contextual information including the date and location of the recording, names of people who appear in the video, a description of the event or occasion being captured, and any relevant background details that help tell the story.</p>
+<p><strong>Summary Checklist:</strong></p>
+<ul class="task-list">
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Place document image file in the <code class="language-plaintext highlighter-rouge">assets/img/</code> folder</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Add a <code class="language-plaintext highlighter-rouge">&lt;div class="document-card" ...&gt;</code> block in <code class="language-plaintext highlighter-rouge">_pages/document-archive.md</code> under the correct category</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Fill in <code class="language-plaintext highlighter-rouge">data-title</code>, <code class="language-plaintext highlighter-rouge">data-description</code>, <code class="language-plaintext highlighter-rouge">data-image</code>, and <code class="language-plaintext highlighter-rouge">data-tags</code>
+</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Test locally</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Commit and push your changes</li>
+</ul>
 
-<p>To ensure optimal quality in our archive, we recommend submitting videos in MP4, MOV, or AVI format, preferably in HD (1080p) resolution when possible. While we can accommodate large file sizes through special upload arrangements, we maintain strict privacy controls - all videos are only shared with approved family members to protect everyone’s privacy.</p>
+<p>If you want to automate or further enhance this process (e.g., with automatic OCR or a CMS), ask Alexander or another technical family member for help!</p>
 
 <hr>
 
-<p><em>This archive is a work in progress. Check back regularly for new additions to our video collection.</em></p>
+<p><em>Every document tells a story. Help us preserve the written history of our family for generations to come.</em></p>
 
   </article>
 

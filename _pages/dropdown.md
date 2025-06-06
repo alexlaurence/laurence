@@ -9,4 +9,8 @@ children:
     permalink: /video-archive/
   - title: Audio Archive
     permalink: /audio-archive/
+  - title: Image Archive
+    permalink: /image-archive/
+  - title: Document Archive
+    permalink: /document-archive/
 ---
