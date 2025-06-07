@@ -60,7 +60,7 @@
   <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%8F%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
 
 <link rel="stylesheet" href="/laurence/assets/css/main.css?d41d8cd98f00b204e9800998ecf8427e">
-<link rel="canonical" href="http://localhost:4000/laurence/family-tree/">
+<link rel="canonical" href="http://localhost:4000/laurence/en/family-tree/">
 
 <!-- Dark Mode -->
 <script src="/laurence/assets/js/theme.js?a81d82887dd692e91686b43de4542f18"></script>
@@ -104,13 +104,17 @@
       <div class="collapse navbar-collapse text-right" id="navbarNav">
         <ul class="navbar-nav ml-auto flex-nowrap">
           
+          
+          
 
           <!-- About -->
-          <li class="nav-item ">
-            <a class="nav-link" href="/laurence/">About
-              
-            </a>
-          </li>
+          
+            <li class="nav-item ">
+              <a class="nav-link" href="/laurence/en/">About
+                
+              </a>
+            </li>
+          
 
           <!-- Other pages -->
           
@@ -190,37 +194,30 @@
             
               
                 
-                <li class="nav-item ">
-                  <a class="nav-link" href="/laurence/family-news/index.html">Family News
-                    
-                  </a>
-                </li>
-              
-            
-          
-            
-              
+                  
+                  <li class="nav-item active">
+                    <a class="nav-link" href="/laurence/en/family-tree/">Family Tree
+                      
+                        <span class="sr-only">(current)</span>
+                      
+                    </a>
+                  </li>
                 
-                <li class="nav-item active">
-                  <a class="nav-link" href="/laurence/family-tree/">Family Tree
-                    
-                      <span class="sr-only">(current)</span>
-                    
-                  </a>
-                </li>
+              
+            
+          
+            
               
             
           
             
           
             
-          
+              
             
           
             
-          
-            
-          
+              
             
           
             
@@ -228,42 +225,89 @@
             
               
                 
-                <li class="nav-item ">
-                  <a class="nav-link" href="/laurence/people/">People
-                    
-                  </a>
-                </li>
+                  
+                  <li class="nav-item ">
+                    <a class="nav-link" href="/laurence/en/video-archive/">Video Archive
+                      
+                    </a>
+                  </li>
+                
+              
+            
+          
+            
               
             
           
             
               
                 
+                  
+                  <li class="nav-item ">
+                    <a class="nav-link" href="/laurence/en/audio-archive/">Audio Archive
+                      
+                    </a>
+                  </li>
                 
-                <li class="nav-item dropdown ">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Library
-                    
-                  </a>
-                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                    
+              
+            
+          
+            
+          
+            
+              
+            
+          
+            
+              
+                
+                  
+                  <li class="nav-item ">
+                    <a class="nav-link" href="/laurence/en/image-archive/">Image Archive
                       
-                        <a class="dropdown-item " href="/laurence/video-archive/">Video Archive</a>
+                    </a>
+                  </li>
+                
+              
+            
+          
+            
+          
+            
+              
+                
+                  
+                  <li class="nav-item ">
+                    <a class="nav-link" href="/laurence/en/document-archive/">Document Archive
                       
-                    
+                    </a>
+                  </li>
+                
+              
+            
+          
+            
+              
+            
+          
+            
+              
+                
+                  
+                  <li class="nav-item ">
+                    <a class="nav-link" href="/laurence/en/people/">People
                       
-                        <a class="dropdown-item " href="/laurence/audio-archive/">Audio Archive</a>
-                      
-                    
-                      
-                        <a class="dropdown-item " href="/laurence/image-archive/">Image Archive</a>
-                      
-                    
-                      
-                        <a class="dropdown-item " href="/laurence/document-archive/">Document Archive</a>
-                      
-                    
-                  </div>
-                </li>
+                    </a>
+                  </li>
+                
+              
+            
+          
+            
+              
+            
+          
+            
               
             
           
@@ -285,6 +329,14 @@
               </button>
             </li>
           
+          <!-- Language Switcher -->
+          <li class="nav-item ml-3" style="display:flex; align-items:center;">
+            <div class="language-switcher" style="font-size:1.05em;">
+              
+                <span style="font-weight:bold;">English</span> | <a href="/laurence/ja/family-tree/">日本語</a>
+              
+            </div>
+          </li>
         </ul>
       </div>
     </div>
@@ -605,20 +657,163 @@
 
 <hr>
 
-<h2 id="how-to-contribute">How to Contribute</h2>
+<h2 id="how-to-add-family-members-to-the-tree">How to Add Family Members to the Tree</h2>
 
-<p>Family members are encouraged to contribute to our genealogical records:</p>
+<p>The family tree data is stored directly in this page’s JavaScript code. To add new family members, you’ll need to edit the <code class="language-plaintext highlighter-rouge">data()</code> function in this file. Here’s how:</p>
+
+<h3 id="understanding-the-data-structure">Understanding the Data Structure</h3>
+
+<p>Each family member is represented as an object with:</p>
+<ul>
+  <li>
+<strong><code class="language-plaintext highlighter-rouge">id</code></strong>: A unique identifier (use a UUID generator or create a unique string)</li>
+  <li>
+<strong><code class="language-plaintext highlighter-rouge">data</code></strong>: Personal information (name, birthday, gender, etc.)</li>
+  <li>
+<strong><code class="language-plaintext highlighter-rouge">rels</code></strong>: Relationships (father, mother, spouses, children)</li>
+</ul>
+
+<h3 id="step-by-step-instructions">Step-by-Step Instructions:</h3>
+
+<h4 id="1-adding-a-child-to-existing-parents">1. <strong>Adding a Child to Existing Parents</strong>
+</h4>
+
+<p>To add a child to Alexander and Rino:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 1. Create the new child object</span>
+<span class="p">{</span>
+  <span class="dl">"</span><span class="s2">id</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">new-child-uuid-here</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">gender</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">M</span><span class="dl">"</span><span class="p">,</span> <span class="c1">// or "F"</span>
+    <span class="dl">"</span><span class="s2">first name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Child's First Name</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">last name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Laurence</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">birthday</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">2025</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">avatar</span><span class="dl">"</span><span class="p">:</span> <span class="dl">""</span>
+  <span class="p">},</span>
+  <span class="dl">"</span><span class="s2">rels</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">father</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0</span><span class="dl">"</span><span class="p">,</span> <span class="c1">// Alexander's ID</span>
+    <span class="dl">"</span><span class="s2">mother</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">8b576785-2654-47c0-b2cc-fe38f75d37c7</span><span class="dl">"</span> <span class="c1">// Rino's ID</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// 2. Add the child's ID to both parents' children arrays</span>
+<span class="c1">// In Alexander's object (id: "0"):</span>
+<span class="dl">"</span><span class="s2">children</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">new-child-uuid-here</span><span class="dl">"</span><span class="p">]</span>
+
+<span class="c1">// In Rino's object (id: "8b576785-2654-47c0-b2cc-fe38f75d37c7"):</span>
+<span class="dl">"</span><span class="s2">children</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">new-child-uuid-here</span><span class="dl">"</span><span class="p">]</span>
+</code></pre></div></div>
+
+<h4 id="2-adding-a-sibling">2. <strong>Adding a Sibling</strong>
+</h4>
+
+<p>To add a sibling to Alexander:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 1. Create the sibling object</span>
+<span class="p">{</span>
+  <span class="dl">"</span><span class="s2">id</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">new-sibling-uuid-here</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">gender</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">F</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">first name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Sister's Name</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">last name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Chhetri</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">birthday</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1990</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">avatar</span><span class="dl">"</span><span class="p">:</span> <span class="dl">""</span>
+  <span class="p">},</span>
+  <span class="dl">"</span><span class="s2">rels</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">father</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">ea7687c8-b5eb-4005-ba00-2e4da493c8ef</span><span class="dl">"</span><span class="p">,</span> <span class="c1">// Same father as Alexander</span>
+    <span class="dl">"</span><span class="s2">mother</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">dd0b5b8a-c07a-4bbe-a47b-4c94e9bf478b</span><span class="dl">"</span>  <span class="c1">// Same mother as Alexander</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// 2. Add the sibling's ID to both parents' children arrays</span>
+<span class="c1">// In father's object (id: "ea7687c8-b5eb-4005-ba00-2e4da493c8ef"):</span>
+<span class="dl">"</span><span class="s2">children</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">0</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">d01cc846-8fa2-4bf8-936f-907b3a44d6d9</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">new-sibling-uuid-here</span><span class="dl">"</span><span class="p">]</span>
+
+<span class="c1">// In mother's object (id: "dd0b5b8a-c07a-4bbe-a47b-4c94e9bf478b"):</span>
+<span class="dl">"</span><span class="s2">children</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">0</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">d01cc846-8fa2-4bf8-936f-907b3a44d6d9</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">new-sibling-uuid-here</span><span class="dl">"</span><span class="p">]</span>
+</code></pre></div></div>
+
+<h4 id="3-adding-a-spousepartner">3. <strong>Adding a Spouse/Partner</strong>
+</h4>
+
+<p>To add a spouse to someone:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 1. Create the spouse object</span>
+<span class="p">{</span>
+  <span class="dl">"</span><span class="s2">id</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">new-spouse-uuid-here</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">gender</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">F</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">first name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Spouse's Name</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">last name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Spouse's Last Name</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">birthday</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1985</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">avatar</span><span class="dl">"</span><span class="p">:</span> <span class="dl">""</span>
+  <span class="p">},</span>
+  <span class="dl">"</span><span class="s2">rels</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">spouses</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">existing-person-id</span><span class="dl">"</span><span class="p">],</span>
+    <span class="dl">"</span><span class="s2">children</span><span class="dl">"</span><span class="p">:</span> <span class="p">[]</span> <span class="c1">// Add any children IDs here</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// 2. Add the spouse's ID to the existing person's spouses array</span>
+<span class="c1">// In the existing person's object:</span>
+<span class="dl">"</span><span class="s2">spouses</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">new-spouse-uuid-here</span><span class="dl">"</span><span class="p">]</span>
+</code></pre></div></div>
+
+<h4 id="4-adding-parents-to-an-existing-person">4. <strong>Adding Parents to an Existing Person</strong>
+</h4>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 1. Create the parent objects (father and mother)</span>
+<span class="p">{</span>
+  <span class="dl">"</span><span class="s2">id</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">new-father-uuid-here</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">gender</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">M</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">first name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Father's Name</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">last name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Father's Last Name</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">birthday</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1950</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">avatar</span><span class="dl">"</span><span class="p">:</span> <span class="dl">""</span>
+  <span class="p">},</span>
+  <span class="dl">"</span><span class="s2">rels</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">children</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">existing-person-id</span><span class="dl">"</span><span class="p">],</span>
+    <span class="dl">"</span><span class="s2">spouses</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">new-mother-uuid-here</span><span class="dl">"</span><span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// 2. Add the parent IDs to the existing person's object</span>
+<span class="c1">// In the existing person's object:</span>
+<span class="dl">"</span><span class="s2">rels</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+  <span class="dl">"</span><span class="s2">father</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">new-father-uuid-here</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">mother</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">new-mother-uuid-here</span><span class="dl">"</span><span class="p">,</span>
+  <span class="c1">// ... other relationships</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="important-tips">Important Tips:</h3>
 
 <ul>
   <li>
-<strong>Share family documents</strong> - Birth certificates, marriage records, and historical documents</li>
+<strong>Generate Unique IDs</strong>: Use an online UUID generator or create unique strings</li>
   <li>
-<strong>Submit photographs</strong> - Family portraits and candid photos from any era</li>
+<strong>Update All Relationships</strong>: When adding someone, make sure to update all related people’s relationship arrays</li>
   <li>
-<strong>Provide biographical information</strong> - Stories, achievements, and memories of family members</li>
+<strong>Test Locally</strong>: Always test the family tree locally before pushing changes</li>
   <li>
-<strong>Verify existing information</strong> - Help us ensure accuracy in our records</li>
+<strong>Backup First</strong>: Make a copy of the working data before making changes</li>
 </ul>
+
+<h3 id="common-relationship-patterns">Common Relationship Patterns:</h3>
+
+<ul>
+  <li>
+<strong>Children arrays</strong>: <code class="language-plaintext highlighter-rouge">["child1-id", "child2-id", "child3-id"]</code>
+</li>
+  <li>
+<strong>Spouses arrays</strong>: <code class="language-plaintext highlighter-rouge">["spouse1-id", "spouse2-id"]</code> (for multiple marriages)</li>
+  <li>
+<strong>Parent references</strong>: <code class="language-plaintext highlighter-rouge">"father": "father-id"</code>, <code class="language-plaintext highlighter-rouge">"mother": "mother-id"</code>
+</li>
+</ul>
+
+<hr>
 
 <h2 id="research-in-progress">Research in Progress</h2>
 

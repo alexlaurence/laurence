@@ -1,10 +1,11 @@
 ---
 layout: page
 title: Family Tree
-permalink: /family-tree/
+permalink: /en/family-tree/
 description: 
 nav: true
-nav_order: 3
+nav_order: 2
+lang: en
 ---
 
 # The Laurence Family Tree
@@ -298,14 +299,145 @@ Tracing our ancestral roots and connections across generations
 
 ---
 
-## How to Contribute
+## How to Add Family Members to the Tree
 
-Family members are encouraged to contribute to our genealogical records:
+The family tree data is stored directly in this page's JavaScript code. To add new family members, you'll need to edit the `data()` function in this file. Here's how:
 
-- **Share family documents** - Birth certificates, marriage records, and historical documents
-- **Submit photographs** - Family portraits and candid photos from any era
-- **Provide biographical information** - Stories, achievements, and memories of family members
-- **Verify existing information** - Help us ensure accuracy in our records
+### Understanding the Data Structure
+
+Each family member is represented as an object with:
+- **`id`**: A unique identifier (use a UUID generator or create a unique string)
+- **`data`**: Personal information (name, birthday, gender, etc.)
+- **`rels`**: Relationships (father, mother, spouses, children)
+
+### Step-by-Step Instructions:
+
+#### 1. **Adding a Child to Existing Parents**
+
+To add a child to Alexander and Rino:
+
+```javascript
+// 1. Create the new child object
+{
+  "id": "new-child-uuid-here",
+  "data": {
+    "gender": "M", // or "F"
+    "first name": "Child's First Name",
+    "last name": "Laurence",
+    "birthday": "2025",
+    "avatar": ""
+  },
+  "rels": {
+    "father": "0", // Alexander's ID
+    "mother": "8b576785-2654-47c0-b2cc-fe38f75d37c7" // Rino's ID
+  }
+}
+
+// 2. Add the child's ID to both parents' children arrays
+// In Alexander's object (id: "0"):
+"children": ["new-child-uuid-here"]
+
+// In Rino's object (id: "8b576785-2654-47c0-b2cc-fe38f75d37c7"):
+"children": ["new-child-uuid-here"]
+```
+
+#### 2. **Adding a Sibling**
+
+To add a sibling to Alexander:
+
+```javascript
+// 1. Create the sibling object
+{
+  "id": "new-sibling-uuid-here",
+  "data": {
+    "gender": "F",
+    "first name": "Sister's Name",
+    "last name": "Chhetri",
+    "birthday": "1990",
+    "avatar": ""
+  },
+  "rels": {
+    "father": "ea7687c8-b5eb-4005-ba00-2e4da493c8ef", // Same father as Alexander
+    "mother": "dd0b5b8a-c07a-4bbe-a47b-4c94e9bf478b"  // Same mother as Alexander
+  }
+}
+
+// 2. Add the sibling's ID to both parents' children arrays
+// In father's object (id: "ea7687c8-b5eb-4005-ba00-2e4da493c8ef"):
+"children": ["0", "d01cc846-8fa2-4bf8-936f-907b3a44d6d9", "new-sibling-uuid-here"]
+
+// In mother's object (id: "dd0b5b8a-c07a-4bbe-a47b-4c94e9bf478b"):
+"children": ["0", "d01cc846-8fa2-4bf8-936f-907b3a44d6d9", "new-sibling-uuid-here"]
+```
+
+#### 3. **Adding a Spouse/Partner**
+
+To add a spouse to someone:
+
+```javascript
+// 1. Create the spouse object
+{
+  "id": "new-spouse-uuid-here",
+  "data": {
+    "gender": "F",
+    "first name": "Spouse's Name",
+    "last name": "Spouse's Last Name",
+    "birthday": "1985",
+    "avatar": ""
+  },
+  "rels": {
+    "spouses": ["existing-person-id"],
+    "children": [] // Add any children IDs here
+  }
+}
+
+// 2. Add the spouse's ID to the existing person's spouses array
+// In the existing person's object:
+"spouses": ["new-spouse-uuid-here"]
+```
+
+#### 4. **Adding Parents to an Existing Person**
+
+```javascript
+// 1. Create the parent objects (father and mother)
+{
+  "id": "new-father-uuid-here",
+  "data": {
+    "gender": "M",
+    "first name": "Father's Name",
+    "last name": "Father's Last Name",
+    "birthday": "1950",
+    "avatar": ""
+  },
+  "rels": {
+    "children": ["existing-person-id"],
+    "spouses": ["new-mother-uuid-here"]
+  }
+}
+
+// 2. Add the parent IDs to the existing person's object
+// In the existing person's object:
+"rels": {
+  "father": "new-father-uuid-here",
+  "mother": "new-mother-uuid-here",
+  // ... other relationships
+}
+```
+
+### Important Tips:
+
+- **Generate Unique IDs**: Use an online UUID generator or create unique strings
+- **Update All Relationships**: When adding someone, make sure to update all related people's relationship arrays
+- **Test Locally**: Always test the family tree locally before pushing changes
+- **Backup First**: Make a copy of the working data before making changes
+
+### Common Relationship Patterns:
+
+- **Children arrays**: `["child1-id", "child2-id", "child3-id"]`
+- **Spouses arrays**: `["spouse1-id", "spouse2-id"]` (for multiple marriages)
+- **Parent references**: `"father": "father-id"`, `"mother": "mother-id"`
+
+---
 
 ## Research in Progress
 

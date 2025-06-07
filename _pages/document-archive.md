@@ -1,10 +1,11 @@
 ---
 layout: page
 title: Document Archive
-permalink: /document-archive/
+permalink: /en/document-archive/
 description: 
-nav: false
+nav: true
 nav_order: 6
+lang: en
 ---
 
 # The Laurence Family Document Archive
@@ -19,76 +20,33 @@ Preserving our family's important papers, certificates, and keepsakes
 
 <!-- Document Gallery by Category with Carousel -->
 <div class="document-gallery-section">
-
-  <!-- Certificates & Awards -->
-  <h3 style="margin-top:2rem;">📜 Certificates & Awards</h3>
-  <div class="category-desc" style="color:#666; font-size:0.98rem; margin-bottom:0.2rem;">
-    Diplomas, degrees, awards, and certificates of achievement.
-  </div>
-  <div class="carousel-row">
-    <button class="carousel-arrow left" aria-label="Scroll left">&#8592;</button>
-    <div class="document-carousel" data-category="certificates-awards">
-      <!-- Example document card -->
-      <div class="document-card" data-title="High School Diploma" data-description="Alexander's high school diploma, 2002." data-image="certificate1.jpg" data-tags="diploma,certificate,school,2002,award">
-        <img src="/assets/img/certificate1.jpg" alt="High School Diploma" class="document-thumb"/>
-        <div class="document-title">High School Diploma</div>
+  {% for category_key in site.data.documents.categories %}
+    {% assign category = category_key[1] %}
+    {% assign category_id = category_key[0] %}
+    
+    <h3 style="margin-top:2rem;">{{ category.en.title }}</h3>
+    <div class="category-desc" style="color:#666; font-size:0.98rem; margin-bottom:0.2rem;">
+      {{ category.en.description }}
+    </div>
+    <div class="carousel-row">
+      <button class="carousel-arrow left" aria-label="Scroll left">&#8592;</button>
+      <div class="document-carousel" data-category="{{ category_id }}">
+        {% for document in site.data.documents.documents %}
+          {% if document.category == category_id %}
+            <div class="document-card" 
+                 data-title="{{ document.en.title }}" 
+                 data-description="{{ document.en.description }}" 
+                 data-image="{{ document.filename }}" 
+                 data-tags="{{ document.en.tags }}">
+              <img src="{{ '/assets/documents/' | append: document.filename | relative_url }}" alt="{{ document.en.title }}" class="document-thumb"/>
+              <div class="document-title">{{ document.en.title }}</div>
+            </div>
+          {% endif %}
+        {% endfor %}
       </div>
-      <!-- Add more Certificates & Awards documents here -->
+      <button class="carousel-arrow right" aria-label="Scroll right">&#8594;</button>
     </div>
-    <button class="carousel-arrow right" aria-label="Scroll right">&#8594;</button>
-  </div>
-
-  <!-- Letters & Correspondence -->
-  <h3 style="margin-top:2rem;">✉️ Letters & Correspondence</h3>
-  <div class="category-desc" style="color:#666; font-size:0.98rem; margin-bottom:0.2rem;">
-    Family letters, postcards, and personal correspondence.
-  </div>
-  <div class="carousel-row">
-    <button class="carousel-arrow left" aria-label="Scroll left">&#8592;</button>
-    <div class="document-carousel" data-category="letters-correspondence">
-      <!-- Add Letters & Correspondence documents here -->
-    </div>
-    <button class="carousel-arrow right" aria-label="Scroll right">&#8594;</button>
-  </div>
-
-  <!-- Legal & Official Documents -->
-  <h3 style="margin-top:2rem;">📑 Legal & Official Documents</h3>
-  <div class="category-desc" style="color:#666; font-size:0.98rem; margin-bottom:0.2rem;">
-    Birth certificates, marriage licenses, immigration papers, and other official records.
-  </div>
-  <div class="carousel-row">
-    <button class="carousel-arrow left" aria-label="Scroll left">&#8592;</button>
-    <div class="document-carousel" data-category="legal-official">
-      <!-- Add Legal & Official Documents here -->
-    </div>
-    <button class="carousel-arrow right" aria-label="Scroll right">&#8594;</button>
-  </div>
-
-  <!-- Heirlooms & Keepsakes -->
-  <h3 style="margin-top:2rem;">🏺 Heirlooms & Keepsakes</h3>
-  <div class="category-desc" style="color:#666; font-size:0.98rem; margin-bottom:0.2rem;">
-    Scans or photos of treasured family artifacts, heirlooms, and keepsakes.
-  </div>
-  <div class="carousel-row">
-    <button class="carousel-arrow left" aria-label="Scroll left">&#8592;</button>
-    <div class="document-carousel" data-category="heirlooms-keepsakes">
-      <!-- Add Heirlooms & Keepsakes here -->
-    </div>
-    <button class="carousel-arrow right" aria-label="Scroll right">&#8594;</button>
-  </div>
-
-  <!-- Miscellaneous -->
-  <h3 style="margin-top:2rem;">🗂️ Miscellaneous</h3>
-  <div class="category-desc" style="color:#666; font-size:0.98rem; margin-bottom:0.2rem;">
-    Other important or interesting documents that don't fit the above categories.
-  </div>
-  <div class="carousel-row">
-    <button class="carousel-arrow left" aria-label="Scroll left">&#8592;</button>
-    <div class="document-carousel" data-category="miscellaneous">
-      <!-- Add Miscellaneous documents here -->
-    </div>
-    <button class="carousel-arrow right" aria-label="Scroll right">&#8594;</button>
-  </div>
+  {% endfor %}
 </div>
 
 <!-- Modal for document details -->
@@ -220,71 +178,54 @@ Preserving our family's important papers, certificates, and keepsakes
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  const cards = document.querySelectorAll('.document-card');
-  const modal = document.getElementById('documentModal');
-  const modalTitle = document.getElementById('modalDocumentTitle');
-  const modalDescription = document.getElementById('modalDocumentDescription');
-  const modalImage = document.getElementById('modalDocumentImage');
-  const modalClose = document.querySelector('.document-modal-close');
+  // Document modal logic
+  const documentCards = document.querySelectorAll('.document-card');
+  const documentModal = document.getElementById('documentModal');
+  const modalDocumentImage = document.getElementById('modalDocumentImage');
+  const modalDocumentTitle = document.getElementById('modalDocumentTitle');
+  const modalDocumentDescription = document.getElementById('modalDocumentDescription');
+  const documentClose = document.querySelector('.document-modal-close');
 
-  cards.forEach(card => {
+  documentCards.forEach(card => {
     card.addEventListener('click', function() {
-      modalTitle.textContent = card.getAttribute('data-title');
-      modalDescription.textContent = card.getAttribute('data-description');
-      modalImage.src = '/assets/img/' + card.getAttribute('data-image');
-      modal.style.display = 'flex';
+      modalDocumentTitle.textContent = card.getAttribute('data-title');
+      modalDocumentDescription.textContent = card.getAttribute('data-description');
+      const imageSrc = card.getAttribute('data-image');
+      modalDocumentImage.src = '{{ "/assets/documents/" | relative_url }}' + imageSrc;
+      modalDocumentImage.alt = card.getAttribute('data-title');
+      documentModal.style.display = 'flex';
     });
   });
 
-  modalClose.addEventListener('click', function() {
-    modal.style.display = 'none';
+  documentClose.addEventListener('click', function() {
+    documentModal.style.display = 'none';
   });
 
   window.addEventListener('click', function(event) {
-    if (event.target === modal) {
-      modal.style.display = 'none';
+    if (event.target === documentModal) {
+      documentModal.style.display = 'none';
     }
   });
 
-  // Responsive carousel arrow logic
-  function updateCarouselArrows() {
-    document.querySelectorAll('.carousel-row').forEach(function(row) {
-      const carousel = row.querySelector('.document-carousel');
-      const leftArrow = row.querySelector('.carousel-arrow.left');
-      const rightArrow = row.querySelector('.carousel-arrow.right');
-      if (!carousel || !leftArrow || !rightArrow) return;
-      const scrollWidth = carousel.scrollWidth;
-      const clientWidth = carousel.clientWidth;
-      if (scrollWidth > clientWidth + 2) {
-        leftArrow.style.display = '';
-        rightArrow.style.display = '';
-      } else {
-        leftArrow.style.display = 'none';
-        rightArrow.style.display = 'none';
-      }
-    });
-  }
-  updateCarouselArrows();
-  window.addEventListener('resize', updateCarouselArrows);
+  // Carousel arrow logic
+  const leftArrows = document.querySelectorAll('.carousel-arrow.left');
+  const rightArrows = document.querySelectorAll('.carousel-arrow.right');
 
-  // Carousel scroll logic
-  document.querySelectorAll('.carousel-row').forEach(function(row) {
-    const carousel = row.querySelector('.document-carousel');
-    const leftArrow = row.querySelector('.carousel-arrow.left');
-    const rightArrow = row.querySelector('.carousel-arrow.right');
-    if (!carousel || !leftArrow || !rightArrow) return;
-    leftArrow.addEventListener('click', function() {
+  leftArrows.forEach(arrow => {
+    arrow.addEventListener('click', function() {
+      const carousel = arrow.parentNode.querySelector('.document-carousel');
       const card = carousel.querySelector('.document-card');
-      let scrollAmount = card ? card.offsetWidth + 24 : 180;
+      let scrollAmount = card ? card.offsetWidth + 24 : 200;
       carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
     });
-    rightArrow.addEventListener('click', function() {
+  });
+
+  rightArrows.forEach(arrow => {
+    arrow.addEventListener('click', function() {
+      const carousel = arrow.parentNode.querySelector('.document-carousel');
       const card = carousel.querySelector('.document-card');
-      let scrollAmount = card ? card.offsetWidth + 24 : 180;
+      let scrollAmount = card ? card.offsetWidth + 24 : 200;
       carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    });
-    carousel.addEventListener('scroll', function() {
-      // Could add logic to disable arrows if at start/end
     });
   });
 
@@ -308,7 +249,6 @@ document.addEventListener('DOMContentLoaded', function() {
       row.style.display = (visibleCount > 0) ? '' : 'none';
       if (visibleCount > 0) anyVisible = true;
     });
-    // Optionally, show a message if no results
   });
 });
 </script>
@@ -317,50 +257,37 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ## How to Add a New Document to the Archive
 
-If you want to add a new document to the archive yourself, follow these steps:
+To add a new document, you now simply need to edit the `_data/documents.json` file:
 
-1. **Prepare your document scan or photo:**
-   - Convert your document to `.jpg`, `.jpeg`, or `.png` format for best compatibility.
-   - Place the document image file in the `assets/img/` folder (create this folder if it doesn't exist).
-   - Example: `assets/img/certificate1.jpg`
+1. **Prepare your document file:**
+   - Scan or photograph your document and save as `.jpg`, `.png`, or `.pdf`.
+   - Place the document file in the `assets/documents/` folder.
 
-2. **Add a document entry to the archive page:**
-   - Open the file `_pages/document-archive.md` in a text editor.
-   - Find the section for the correct category (Certificates & Awards, Letters & Correspondence, etc.).
-   - Add a new block like this inside the appropriate `<div class="document-carousel" ...>`:
-     ```html
-     <div class="document-card"
-          data-title="High School Diploma"
-          data-description="Alexander's high school diploma, 2002."
-          data-image="certificate1.jpg"
-          data-tags="diploma,certificate,school,2002,award">
-       <img src="/assets/img/certificate1.jpg" alt="High School Diploma" class="document-thumb"/>
-       <div class="document-title">High School Diploma</div>
-     </div>
+2. **Add a document entry to the JSON data:**
+   - Open the file `_data/documents.json` in a text editor.
+   - Add a new document object to the `documents` array:
+     ```json
+     {
+       "id": "your-document-id",
+       "category": "genealogy",
+       "filename": "your-document.jpg",
+       "en": {
+         "title": "Your Document Title",
+         "description": "Description of your document.",
+         "tags": "tag1,tag2,tag3"
+       },
+       "ja": {
+         "title": "文書のタイトル",
+         "description": "文書の説明。",
+         "tags": "タグ1,タグ2,タグ3"
+       }
+     }
      ```
-   - **data-title**: The display title of the document.
-   - **data-description**: A short description of the document.
-   - **data-image**: The filename of your document image (should match the file you placed in `assets/img/`).
-   - **data-tags**: Comma-separated keywords for search (include year, type, people, location, etc.).
-   - The `<img ...>` tag displays the document thumbnail in the gallery.
 
-3. **Test your addition:**
-   - Run the site locally (see instructions above).
-   - Search for your document using the search bar.
-   - Click the document card to open the modal and verify the title, description, and tags.
+3. **Test your addition locally and push your changes.**
 
-4. **Commit and push your changes:**
-   - After confirming everything works, save your changes and upload them to the repository.
-
-**Summary Checklist:**
-- [ ] Place document image file in the `assets/img/` folder
-- [ ] Add a `<div class="document-card" ...>` block in `_pages/document-archive.md` under the correct category
-- [ ] Fill in `data-title`, `data-description`, `data-image`, and `data-tags`
-- [ ] Test locally
-- [ ] Commit and push your changes
-
-If you want to automate or further enhance this process (e.g., with automatic OCR or a CMS), ask Alexander or another technical family member for help!
+This change will automatically update both the English and Japanese versions of the document archive!
 
 ---
 
-*Every document tells a story. Help us preserve the written history of our family for generations to come.* 
+*Preserving our family's paper trail—important documents, certificates, and treasured keepsakes that tell the story of our heritage.* 

@@ -1,0 +1,61 @@
+{
+  "categories": {
+    "family-events": {
+      "en": {
+        "title": "🎬 Family Events",
+        "description": "Special occasions, celebrations, and memorable moments caught on video."
+      },
+      "ja": {
+        "title": "🎬 家族イベント", 
+        "description": "特別な機会、お祝い、ビデオで撮影された記憶に残る瞬間。"
+      }
+    },
+    "home-movies": {
+      "en": {
+        "title": "🏠 Home Movies",
+        "description": "Casual family recordings, candid moments, and everyday life captured at home."
+      },
+      "ja": {
+        "title": "🏠 ホームムービー",
+        "description": "カジュアルな家族の記録、率直な瞬間、家庭で撮影された日常生活。"
+      }
+    },
+    "interviews": {
+      "en": {
+        "title": "🎙️ Interviews & Stories",
+        "description": "Family interviews, oral histories, and storytelling sessions."
+      },
+      "ja": {
+        "title": "🎙️ インタビューと物語",
+        "description": "家族のインタビュー、口述歴史、ストーリーテリングセッション。"
+      }
+    },
+    "historical-footage": {
+      "en": {
+        "title": "📽️ Historical Footage",
+        "description": "Older videos, archived footage, and vintage family recordings."
+      },
+      "ja": {
+        "title": "📽️ 歴史的映像",
+        "description": "古いビデオ、アーカイブ映像、ヴィンテージ家族記録。"
+      }
+    }
+  },
+  "videos": [
+    {
+      "id": "example-video",
+      "category": "family-events",
+      "filename": "example.mp4",
+      "en": {
+        "title": "Example Family Video",
+        "synopsis": "An example video for demonstration purposes.",
+        "tags": "example,demo,family,video"
+      },
+      "ja": {
+        "title": "サンプル家族ビデオ",
+        "synopsis": "デモンストレーション用のサンプルビデオ。",
+        "tags": "サンプル,デモ,家族,ビデオ"
+      }
+    }
+  ]
+} 

@@ -1,0 +1,61 @@
+{
+  "categories": {
+    "oral-histories": {
+      "en": {
+        "title": "🎙️ Oral Histories",
+        "description": "Recorded interviews with family members sharing their life stories, memories, and wisdom."
+      },
+      "ja": {
+        "title": "🎙️ 口述歴史",
+        "description": "家族の人生の物語、思い出、知恵を共有する録音インタビュー。"
+      }
+    },
+    "family-stories": {
+      "en": {
+        "title": "📖 Family Stories",
+        "description": "Storytelling sessions, family legends, and tales passed down through generations."
+      },
+      "ja": {
+        "title": "📖 家族の物語",
+        "description": "ストーリーテリングセッション、家族の伝説、世代を超えて受け継がれる物語。"
+      }
+    },
+    "phone-calls": {
+      "en": {
+        "title": "📞 Phone Calls & Conversations",
+        "description": "Important phone conversations, family calls, and meaningful discussions."
+      },
+      "ja": {
+        "title": "📞 電話・会話",
+        "description": "重要な電話での会話、家族通話、意味のある議論。"
+      }
+    },
+    "events-ambient": {
+      "en": {
+        "title": "🎉 Event Recordings",
+        "description": "Audio from family events, celebrations, and gatherings."
+      },
+      "ja": {
+        "title": "🎉 イベント録音",
+        "description": "家族イベント、お祝い、集まりからの音声。"
+      }
+    }
+  },
+  "recordings": [
+    {
+      "id": "example-audio",
+      "category": "oral-histories",
+      "filename": "example.mp3",
+      "en": {
+        "title": "Example Family Recording",
+        "synopsis": "An example audio recording for demonstration purposes.",
+        "tags": "example,demo,family,audio"
+      },
+      "ja": {
+        "title": "サンプル家族録音",
+        "synopsis": "デモンストレーション用のサンプル音声録音。",
+        "tags": "サンプル,デモ,家族,音声"
+      }
+    }
+  ]
+} 

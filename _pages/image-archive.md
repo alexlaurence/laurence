@@ -1,10 +1,11 @@
 ---
 layout: page
 title: Image Archive
-permalink: /image-archive/
+permalink: /en/image-archive/
 description: 
-nav: false
+nav: true
 nav_order: 5
+lang: en
 ---
 
 # The Laurence Family Image Archive
@@ -19,76 +20,34 @@ Preserving our family's history in photographs and images
 
 <!-- Netflix-style Album Gallery by Category with Carousel -->
 <div class="image-gallery-section">
-
-  <!-- Family Events -->
-  <h3 style="margin-top:2rem;">📸 Family Events</h3>
-  <div class="category-desc" style="color:#666; font-size:0.98rem; margin-bottom:0.2rem;">
-    Weddings, reunions, holidays, birthdays, graduations, and celebrations—cherished moments from our most important events.
-  </div>
-  <div class="carousel-row">
-    <button class="carousel-arrow left" aria-label="Scroll left">&#8592;</button>
-    <div class="album-carousel" data-category="family-events">
-      <!-- Example album card -->
-      <div class="album-card" data-title="Family Reunion 1998" data-description="A heartwarming look back at the 1998 family reunion in the old backyard." data-cover="1.jpg" data-images='["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg"]' data-tags="reunion,1998,backyard,family event,celebration">
-        <img src="/assets/img/1.jpg" alt="Family Reunion 1998" class="album-thumb"/>
-        <div class="album-title">Family Reunion 1998</div>
+  {% for category_key in site.data.images.categories %}
+    {% assign category = category_key[1] %}
+    {% assign category_id = category_key[0] %}
+    
+    <h3 style="margin-top:2rem;">{{ category.en.title }}</h3>
+    <div class="category-desc" style="color:#666; font-size:0.98rem; margin-bottom:0.2rem;">
+      {{ category.en.description }}
+    </div>
+    <div class="carousel-row">
+      <button class="carousel-arrow left" aria-label="Scroll left">&#8592;</button>
+      <div class="album-carousel" data-category="{{ category_id }}">
+        {% for album in site.data.images.albums %}
+          {% if album.category == category_id %}
+            <div class="album-card" 
+                 data-title="{{ album.en.title }}" 
+                 data-description="{{ album.en.description }}" 
+                 data-cover="{{ album.cover }}" 
+                 data-images='{{ album.images | jsonify }}' 
+                 data-tags="{{ album.en.tags }}">
+              <img src="{{ '/assets/img/' | append: album.cover | relative_url }}" alt="{{ album.en.title }}" class="album-thumb"/>
+              <div class="album-title">{{ album.en.title }}</div>
+            </div>
+          {% endif %}
+        {% endfor %}
       </div>
-      <!-- Add more Family Events albums here -->
+      <button class="carousel-arrow right" aria-label="Scroll right">&#8594;</button>
     </div>
-    <button class="carousel-arrow right" aria-label="Scroll right">&#8594;</button>
-  </div>
-
-  <!-- Portraits -->
-  <h3 style="margin-top:2rem;">🧑‍🦳 Portraits</h3>
-  <div class="category-desc" style="color:#666; font-size:0.98rem; margin-bottom:0.2rem;">
-    Individual and group portraits, school photos, formal pictures, and family snapshots.
-  </div>
-  <div class="carousel-row">
-    <button class="carousel-arrow left" aria-label="Scroll left">&#8592;</button>
-    <div class="album-carousel" data-category="portraits">
-      <!-- Add Portraits albums here -->
-    </div>
-    <button class="carousel-arrow right" aria-label="Scroll right">&#8594;</button>
-  </div>
-
-  <!-- Historical Photos -->
-  <h3 style="margin-top:2rem;">🕰️ Historical Photos</h3>
-  <div class="category-desc" style="color:#666; font-size:0.98rem; margin-bottom:0.2rem;">
-    Old family photos, black-and-white images, immigration, early generations, and vintage scenes.
-  </div>
-  <div class="carousel-row">
-    <button class="carousel-arrow left" aria-label="Scroll left">&#8592;</button>
-    <div class="album-carousel" data-category="historical-photos">
-      <!-- Add Historical Photos albums here -->
-    </div>
-    <button class="carousel-arrow right" aria-label="Scroll right">&#8594;</button>
-  </div>
-
-  <!-- Everyday Life -->
-  <h3 style="margin-top:2rem;">🏡 Everyday Life</h3>
-  <div class="category-desc" style="color:#666; font-size:0.98rem; margin-bottom:0.2rem;">
-    Candid moments, pets, vacations, home, and the little things that make up family life.
-  </div>
-  <div class="carousel-row">
-    <button class="carousel-arrow left" aria-label="Scroll left">&#8592;</button>
-    <div class="album-carousel" data-category="everyday-life">
-      <!-- Add Everyday Life albums here -->
-    </div>
-    <button class="carousel-arrow right" aria-label="Scroll right">&#8594;</button>
-  </div>
-
-  <!-- Documents & Keepsakes -->
-  <h3 style="margin-top:2rem;">📄 Documents & Keepsakes</h3>
-  <div class="category-desc" style="color:#666; font-size:0.98rem; margin-bottom:0.2rem;">
-    Scans of letters, certificates, awards, heirlooms, and treasured family artifacts.
-  </div>
-  <div class="carousel-row">
-    <button class="carousel-arrow left" aria-label="Scroll left">&#8592;</button>
-    <div class="album-carousel" data-category="documents-keepsakes">
-      <!-- Add Documents & Keepsakes albums here -->
-    </div>
-    <button class="carousel-arrow right" aria-label="Scroll right">&#8594;</button>
-  </div>
+  {% endfor %}
 </div>
 
 <!-- Modal for album images -->
@@ -295,9 +254,9 @@ document.addEventListener('DOMContentLoaded', function() {
       images.forEach(img => {
         const imgCard = document.createElement('div');
         imgCard.className = 'album-image-card';
-        imgCard.innerHTML = `<img src="/assets/img/${img}" alt="${img}" class="album-image-thumb"/>`;
+        imgCard.innerHTML = `<img src="{{ '/assets/img/' | relative_url }}${img}" alt="${img}" class="album-image-thumb"/>`;
         imgCard.addEventListener('click', function(e) {
-          window.open(`/assets/img/${img}`, '_blank');
+          window.open(`{{ '/assets/img/' | relative_url }}${img}`, '_blank');
           e.stopPropagation();
         });
         albumImageCarousel.appendChild(imgCard);
@@ -375,52 +334,37 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ## How to Add a New Album to the Archive
 
-If you want to add a new album to the archive yourself, follow these steps:
+To add a new album, you now simply need to edit the `_data/images.json` file:
 
 1. **Prepare your image files:**
    - Convert your images to `.jpg`, `.jpeg`, or `.png` format for best compatibility.
-   - Place all the images for your album in the `assets/img/` folder (create this folder if it doesn't exist).
-   - Example: `assets/img/family-reunion-1998-1.jpg`, `assets/img/family-reunion-1998-2.jpg`, `assets/img/family-reunion-1998-3.jpg`
+   - Place all the images for your album in the `assets/img/` folder.
 
-2. **Add an album entry to the archive page:**
-   - Open the file `_pages/image-archive.md` in a text editor.
-   - Find the section for the correct category (Family Events, Portraits, etc.).
-   - Add a new block like this inside the appropriate `<div class="album-carousel" ...>`:
-     ```html
-     <div class="album-card"
-          data-title="Family Reunion 1998"
-          data-description="A heartwarming look back at the 1998 family reunion in the old backyard."
-          data-cover="family-reunion-1998-1.jpg"
-          data-images='["family-reunion-1998-1.jpg","family-reunion-1998-2.jpg","family-reunion-1998-3.jpg"]'
-          data-tags="reunion,1998,backyard,family event,celebration">
-       <img src="/assets/img/family-reunion-1998-1.jpg" alt="Family Reunion 1998" class="album-thumb"/>
-       <div class="album-title">Family Reunion 1998</div>
-     </div>
+2. **Add an album entry to the JSON data:**
+   - Open the file `_data/images.json` in a text editor.
+   - Add a new album object to the `albums` array:
+     ```json
+     {
+       "id": "your-album-id",
+       "category": "family-events",
+       "cover": "cover-image.jpg",
+       "images": ["image1.jpg", "image2.jpg", "image3.jpg"],
+       "en": {
+         "title": "Your Album Title",
+         "description": "Description of your album.",
+         "tags": "tag1,tag2,tag3"
+       },
+       "ja": {
+         "title": "アルバムのタイトル",
+         "description": "アルバムの説明。",
+         "tags": "タグ1,タグ2,タグ3"
+       }
+     }
      ```
-   - **data-title**: The display title of the album (e.g., "Family Reunion 1998").
-   - **data-description**: A short description of the album.
-   - **data-cover**: The filename of the cover image (should match one of the images in the album).
-   - **data-images**: A JSON array of all image filenames in the album (use double quotes inside the array, as shown above).
-   - **data-tags**: Comma-separated keywords for search (include year, event type, people, location, etc.).
-   - The `<img ...>` tag displays the album cover in the gallery.
 
-3. **Test your addition:**
-   - Run the site locally (see instructions above in the README).
-   - Search for your album using the search bar.
-   - Click the album card to open the popup and verify the images, title, description, and tags.
-   - Click any image in the popup to open the full-size image in a new tab.
+3. **Test your addition locally and push your changes.**
 
-4. **Commit and push your changes:**
-   - After confirming everything works, save your changes and upload them to the repository.
-
-**Summary Checklist:**
-- [ ] Place all album images in the `assets/img/` folder
-- [ ] Add a `<div class="album-card" ...>` block in `_pages/image-archive.md` under the correct category
-- [ ] Fill in `data-title`, `data-description`, `data-cover`, `data-images`, and `data-tags`
-- [ ] Test locally
-- [ ] Commit and push your changes
-
-If you want to automate or further enhance this process (e.g., with automatic thumbnails or a CMS), ask Alexander or another technical family member for help!
+This change will automatically update both the English and Japanese versions of the image archive!
 
 ---
 

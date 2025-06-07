@@ -1,0 +1,71 @@
+{
+  "categories": {
+    "genealogy": {
+      "en": {
+        "title": "🌳 Genealogy & Family Tree",
+        "description": "Birth certificates, marriage records, family trees, and genealogical research materials."
+      },
+      "ja": {
+        "title": "🌳 系譜・家系図",
+        "description": "出生証明書、結婚記録、家系図、系譜研究資料。"
+      }
+    },
+    "correspondence": {
+      "en": {
+        "title": "✉️ Letters & Correspondence",
+        "description": "Family letters, postcards, emails, and written communications between relatives."
+      },
+      "ja": {
+        "title": "✉️ 手紙・通信",
+        "description": "家族の手紙、ポストカード、メール、親族間の書面による連絡。"
+      }
+    },
+    "legal-official": {
+      "en": {
+        "title": "📜 Legal & Official Documents",
+        "description": "Wills, property deeds, immigration papers, military records, and official certificates."
+      },
+      "ja": {
+        "title": "📜 法的・公式文書",
+        "description": "遺言書、不動産証書、移民書類、軍事記録、公式証明書。"
+      }
+    },
+    "personal-memorabilia": {
+      "en": {
+        "title": "🎓 Personal & Memorabilia",
+        "description": "School records, awards, diplomas, personal notes, diaries, and cherished keepsakes."
+      },
+      "ja": {
+        "title": "🎓 個人・記念品",
+        "description": "学校記録、賞状、卒業証書、個人的なメモ、日記、大切な記念品。"
+      }
+    },
+    "historical-records": {
+      "en": {
+        "title": "📚 Historical Records",
+        "description": "Old documents, historical papers, newspaper clippings, and vintage records."
+      },
+      "ja": {
+        "title": "📚 歴史記録",
+        "description": "古い文書、歴史的書類、新聞の切り抜き、ヴィンテージ記録。"
+      }
+    }
+  },
+  "documents": [
+    {
+      "id": "example-document",
+      "category": "genealogy",
+      "filename": "example.pdf",
+      "en": {
+        "title": "Example Family Document",
+        "description": "An example document for demonstration purposes.",
+        "tags": "example,demo,family,document"
+      },
+      "ja": {
+        "title": "サンプル家族文書",
+        "description": "デモンストレーション用のサンプル文書。",
+        "tags": "サンプル,デモ,家族,文書"
+      }
+    }
+  ]
+} 

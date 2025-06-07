@@ -1,0 +1,72 @@
+{
+  "categories": {
+    "family-events": {
+      "en": {
+        "title": "📸 Family Events",
+        "description": "Weddings, reunions, holidays, birthdays, graduations, and celebrations—cherished moments from our most important events."
+      },
+      "ja": {
+        "title": "📸 家族イベント",
+        "description": "結婚式、再会、祝日、誕生日、卒業式、お祝い—私たちの最も重要なイベントからの大切な瞬間。"
+      }
+    },
+    "portraits": {
+      "en": {
+        "title": "🧑‍🦳 Portraits",
+        "description": "Individual and group portraits, school photos, formal pictures, and family snapshots."
+      },
+      "ja": {
+        "title": "🧑‍🦳 ポートレート",
+        "description": "個人や集合写真、学校写真、正式な写真、家族のスナップショット。"
+      }
+    },
+    "historical-photos": {
+      "en": {
+        "title": "🕰️ Historical Photos",
+        "description": "Old family photos, black-and-white images, immigration, early generations, and vintage scenes."
+      },
+      "ja": {
+        "title": "🕰️ 歴史的写真",
+        "description": "古い家族写真、白黒画像、移民、初期の世代、ヴィンテージシーン。"
+      }
+    },
+    "everyday-life": {
+      "en": {
+        "title": "🏡 Everyday Life",
+        "description": "Candid moments, pets, vacations, home, and the little things that make up family life."
+      },
+      "ja": {
+        "title": "🏡 日常生活",
+        "description": "率直な瞬間、ペット、休暇、家庭、家族生活を構成する小さなこと。"
+      }
+    },
+    "documents-keepsakes": {
+      "en": {
+        "title": "📄 Documents & Keepsakes",
+        "description": "Scans of letters, certificates, awards, heirlooms, and treasured family artifacts."
+      },
+      "ja": {
+        "title": "📄 文書・記念品",
+        "description": "手紙、証明書、賞状、家宝、大切な家族の工芸品のスキャン。"
+      }
+    }
+  },
+  "albums": [
+    {
+      "id": "family-reunion-1998",
+      "category": "family-events",
+      "cover": "1.jpg",
+      "images": ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg"],
+      "en": {
+        "title": "Family Reunion 1998",
+        "description": "A heartwarming look back at the 1998 family reunion in the old backyard.",
+        "tags": "reunion,1998,backyard,family event,celebration"
+      },
+      "ja": {
+        "title": "家族再会 1998",
+        "description": "1998年の家族再会を振り返る心温まる思い出。",
+        "tags": "再会,1998年,裏庭,家族イベント,お祝い"
+      }
+    }
+  ]
+} 

@@ -1,7 +1,8 @@
 ---
 layout: about
 title: About
-permalink: /
+permalink: /en/
+lang: en
 subtitle: <em>Scientia potentia est</em> - Knowledge is power
 
 profile:
@@ -39,11 +40,11 @@ At the heart of the shield rests a smaller, inner shield — the inescutcheon �
 
 Above the shield sits a steel helm, turned forward with visor closed, denoting noble rank and preparedness. The red and white mantling, flowing from the helm, echoes the colours of the shield and symbolises defence and dignity.
 
-Flanking the shield are laurel branches bearing red berries. These are not merely decorative; the laurel is a defining motif for the Laurence family, drawn from the very root of its name — Laurentius, meaning “crowned with laurel.” It embodies victory, academic and personal achievement, and the enduring spirit of peace and honour.
+Flanking the shield are laurel branches bearing red berries. These are not merely decorative; the laurel is a defining motif for the Laurence family, drawn from the very root of its name — Laurentius, meaning "crowned with laurel." It embodies victory, academic and personal achievement, and the enduring spirit of peace and honour.
 
-Beneath the shield flows a scroll inscribed with the family motto: “Scientia • Potentia” — “Knowledge is Power.” This Latin phrase embodies our family's core belief in the transformative power of education and understanding. Throughout generations, the Laurence family has valued learning, wisdom, and the pursuit of knowledge as the foundation for personal growth and societal contribution.
+Beneath the shield flows a scroll inscribed with the family motto: "Scientia • Potentia" — "Knowledge is Power." This Latin phrase embodies our family's core belief in the transformative power of education and understanding. Throughout generations, the Laurence family has valued learning, wisdom, and the pursuit of knowledge as the foundation for personal growth and societal contribution.
 
-The Laurence coat of arms is more than a visual design; it is a legacy in symbol — a reflection of the family’s past, a commitment to its present, and a beacon for generations yet to come.
+The Laurence coat of arms is more than a visual design; it is a legacy in symbol — a reflection of the family's past, a commitment to its present, and a beacon for generations yet to come.
 
 ## Our Values
 
