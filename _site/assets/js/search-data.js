@@ -9,19 +9,12 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/laurence/";
     },
-  },{id: "nav-family-tree",
-          title: "Family Tree",
+  },{id: "nav-ニュース",
+          title: "ニュース",
           description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/laurence/en/family-tree/";
-          },
-        },{id: "nav-家系図",
-          title: "家系図",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/laurence/ja/family-tree/";
+            window.location.href = "/laurence/ja/news/";
           },
         },{id: "nav-family-news",
           title: "Family News",
@@ -30,12 +23,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/laurence/family-news/index.html";
           },
-        },{id: "nav-ビデオアーカイブ",
-          title: "ビデオアーカイブ",
+        },{id: "nav-news",
+          title: "News",
           description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/laurence/ja/video-archive/";
+            window.location.href = "/laurence/en/news/";
           },
         },{id: "nav-video-archive",
           title: "Video Archive",
@@ -44,6 +37,62 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/laurence/en/video-archive/";
           },
+        },{id: "nav-家系図",
+          title: "家系図",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/laurence/ja/family-tree/";
+          },
+        },{id: "nav-family-tree",
+          title: "Family Tree",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/laurence/en/family-tree/";
+          },
+        },{id: "nav-ビデオアーカイブ",
+          title: "ビデオアーカイブ",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/laurence/ja/video-archive/";
+          },
+        },{id: "dropdown-オーディオアーカイブ",
+              title: "オーディオアーカイブ",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/laurence/ja/audio-archive/";
+              },
+            },{id: "dropdown-ビデオアーカイブ",
+              title: "ビデオアーカイブ",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/laurence/ja/video-archive/";
+              },
+            },{id: "dropdown-画像アーカイブ",
+              title: "画像アーカイブ",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/laurence/ja/image-archive/";
+              },
+            },{id: "dropdown-文書アーカイブ",
+              title: "文書アーカイブ",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/laurence/ja/document-archive/";
+              },
+            },{id: "nav-audio-archive",
+          title: "Audio Archive",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/laurence/en/audio-archive/";
+          },
         },{id: "nav-オーディオアーカイブ",
           title: "オーディオアーカイブ",
           description: "",
@@ -51,12 +100,40 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/laurence/ja/audio-archive/";
           },
-        },{id: "nav-audio-archive",
-          title: "Audio Archive",
+        },{id: "dropdown-audio-archive",
+              title: "Audio Archive",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/laurence/en/audio-archive/";
+              },
+            },{id: "dropdown-video-archive",
+              title: "Video Archive",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/laurence/en/video-archive/";
+              },
+            },{id: "dropdown-image-archive",
+              title: "Image Archive",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/laurence/en/image-archive/";
+              },
+            },{id: "dropdown-document-archive",
+              title: "Document Archive",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/laurence/en/document-archive/";
+              },
+            },{id: "nav-人々",
+          title: "人々",
           description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/laurence/en/audio-archive/";
+            window.location.href = "/laurence/ja/people/";
           },
         },{id: "nav-画像アーカイブ",
           title: "画像アーカイブ",
@@ -72,12 +149,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/laurence/en/image-archive/";
           },
-        },{id: "nav-document-archive",
-          title: "Document Archive",
+        },{id: "nav-people",
+          title: "People",
           description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/laurence/en/document-archive/";
+            window.location.href = "/laurence/en/people/";
           },
         },{id: "nav-ドキュメントアーカイブ",
           title: "ドキュメントアーカイブ",
@@ -86,49 +163,14 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/laurence/ja/document-archive/";
           },
-        },{id: "nav-people",
-          title: "People",
+        },{id: "nav-document-archive",
+          title: "Document Archive",
           description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/laurence/en/people/";
+            window.location.href = "/laurence/en/document-archive/";
           },
-        },{id: "nav-人々",
-          title: "人々",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/laurence/ja/people/";
-          },
-        },{id: "dropdown-video-archive",
-              title: "Video Archive",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "/laurence/video-archive/";
-              },
-            },{id: "dropdown-audio-archive",
-              title: "Audio Archive",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "/laurence/audio-archive/";
-              },
-            },{id: "dropdown-image-archive",
-              title: "Image Archive",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "/laurence/image-archive/";
-              },
-            },{id: "dropdown-document-archive",
-              title: "Document Archive",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "/laurence/document-archive/";
-              },
-            },{id: "post-creating-family-photo-galleries",
+        },{id: "post-creating-family-photo-galleries",
         
           title: "Creating Family Photo Galleries",
         

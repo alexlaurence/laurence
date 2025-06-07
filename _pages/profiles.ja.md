@@ -5,7 +5,7 @@ title: 人々
 lang: ja
 description: 
 nav: true
-nav_order: 7
+nav_order: 5
 profiles:
   - align: right
     image: AlexanderAdamLaurence.JPG

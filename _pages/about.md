@@ -34,17 +34,19 @@ Welcome to the official archive of the Laurence family heritage. This site serve
 
 The Laurence family coat of arms is a heraldic emblem rich with symbolism, reflecting the values, legacy, and identity of the Laurence lineage. The shield is quartered in red and white, each colour and symbol carefully chosen to convey aspects of character and tradition passed through generations.
 
-The red quadrants, bearing white cross pattée, signify sacrifice, courage, and faith. These crosses, with their distinct flared ends, represent the enduring pursuit of truth and service, possibly recalling ancestral ties to knighthood or religious dedication. The white quadrants, in contrast, display rampant red lions — symbols of bravery, strength, and noble defiance. Together, these emblems speak of a family that upholds both virtue and vigilance, peace and honour.
+The red quadrants, bearing white cross pattée, signify sacrifice, courage, and faith. These crosses, with their distinct flared ends, represent the enduring pursuit of truth and service, possibly recalling ancestral ties to knighthood or religious dedication. The white quadrants, in contrast, display rampant red foxes — symbols of cleverness, resilience, and noble defiance. Together, these emblems speak of a family that upholds both virtue and vigilance, peace and honour.
 
 At the heart of the shield rests a smaller, inner shield — the inescutcheon — coloured deep blue with a silver diagonal band, framed in gold and adorned with four gold stars. This feature represents a distinguished branch within the family, marked by loyalty, clarity of purpose, and excellence. The band is a mark of protection and honour, while the stars stand for aspiration, guidance, and distinguished achievement.
 
 Above the shield sits a steel helm, turned forward with visor closed, denoting noble rank and preparedness. The red and white mantling, flowing from the helm, echoes the colours of the shield and symbolises defence and dignity.
 
-Flanking the shield are laurel branches bearing red berries. These are not merely decorative; the laurel is a defining motif for the Laurence family, drawn from the very root of its name — Laurentius, meaning "crowned with laurel." It embodies victory, academic and personal achievement, and the enduring spirit of peace and honour.
+Flanking the shield are upright red foxes standing on their hind legs, serving as supporters. Their presence conveys intelligence, adaptability, and a proud, watchful spirit — attributes long associated with the Laurence family’s approach to life and legacy.
 
-Beneath the shield flows a scroll inscribed with the family motto: "Scientia • Potentia" — "Knowledge is Power." This Latin phrase embodies our family's core belief in the transformative power of education and understanding. Throughout generations, the Laurence family has valued learning, wisdom, and the pursuit of knowledge as the foundation for personal growth and societal contribution.
+Surrounding the base of the arms are laurel branches bearing red berries. These are not merely decorative; the laurel is a defining motif for the Laurence family, drawn from the very root of its name — Laurentius, meaning “crowned with laurel.” It embodies victory, academic and personal achievement, and the enduring spirit of peace and honour.
 
-The Laurence coat of arms is more than a visual design; it is a legacy in symbol — a reflection of the family's past, a commitment to its present, and a beacon for generations yet to come.
+Beneath the shield flows a scroll inscribed with the family motto: Scientia • Potentia — “Knowledge is Power.” This Latin phrase embodies the family’s core belief in the transformative power of education and understanding. Through generations, the Laurence family has valued learning, wisdom, and the pursuit of knowledge as the foundation for personal growth and societal contribution.
+
+The Laurence coat of arms is more than a visual design; it is a legacy in symbol — a reflection of the family’s past, a commitment to its present, and a beacon for generations yet to come.
 
 ## Our Values
 

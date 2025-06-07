@@ -2,15 +2,16 @@
 layout: page
 title: Library
 nav: true
-nav_order: 8
+nav_order: 4
 dropdown: true
 children:
-  - title: Video Archive
-    permalink: /video-archive/
   - title: Audio Archive
-    permalink: /audio-archive/
+    permalink: /en/audio-archive/
+  - title: Video Archive
+    permalink: /en/video-archive/
   - title: Image Archive
-    permalink: /image-archive/
+    permalink: /en/image-archive/
   - title: Document Archive
-    permalink: /document-archive/
+    permalink: /en/document-archive/
+lang: en
 ---
