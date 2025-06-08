@@ -18,7 +18,9 @@ layout: default
   <article class="archive">
     <div class="table-responsive">
       <table class="table table-sm table-borderless">
+        {% assign current_lang = page.lang | default: 'en' %}
         {% for document in page.documents %}
+          {% if document.lang == current_lang or (document.lang == nil and current_lang == 'en') %}
           <tr>
             <th scope="row">{{ document.date | date: '%b %d, %Y' }}</th>
             <td>
@@ -31,6 +33,7 @@ layout: default
               {% endif %}
             </td>
           </tr>
+          {% endif %}
         {% endfor %}
       </table>
     </div>

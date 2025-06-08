@@ -1,6 +1,16 @@
 <div class="news">
-  {% if site.news != blank %}
-    {% assign news_size = site.news | size %}
+  {% comment %} Determine current language {% endcomment %}
+  {% assign current_lang = page.lang | default: 'en' %}
+  
+  {% comment %} Select the appropriate news collection based on language {% endcomment %}
+  {% if current_lang == 'ja' %}
+    {% assign news_collection = site.news_ja %}
+  {% else %}
+    {% assign news_collection = site.news_en %}
+  {% endif %}
+  
+  {% if news_collection != blank %}
+    {% assign news_size = news_collection | size %}
     <div
       class="table-responsive"
       {% if include.limit and page.announcements.scrollable and news_size > 3 %}
@@ -8,7 +18,7 @@
       {% endif %}
     >
       <table class="table table-sm table-borderless">
-        {% assign news = site.news | reverse %}
+        {% assign news = news_collection | reverse %}
         {% if include.limit and page.announcements.limit %}
           {% assign news_limit = page.announcements.limit %}
         {% else %}

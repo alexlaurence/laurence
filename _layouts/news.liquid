@@ -1,0 +1,66 @@
+---
+layout: default
+---
+
+<div class="post">
+  {% assign blog_name_size = site.blog_name | size %}
+  {% assign blog_description_size = site.blog_description | size %}
+  {% assign blog_name_ja_size = site.blog_name_ja | size %}
+  {% assign blog_description_ja_size = site.blog_description_ja | size %}
+
+  {% if page.lang == 'ja' and blog_name_ja_size > 0 or blog_description_ja_size > 0 %}
+    <div class="header-bar">
+      <h1>{{ site.blog_name_ja }}</h1>
+      <h2>{{ site.blog_description_ja }}</h2>
+    </div>
+  {% elsif blog_name_size > 0 or blog_description_size > 0 %}
+    <div class="header-bar">
+      <h1>{{ site.blog_name }}</h1>
+      <h2>{{ site.blog_description }}</h2>
+    </div>
+  {% endif %}
+
+  {% if page.lang == 'ja' and site.display_tags_ja and site.display_tags_ja.size > 0 %}
+    <div class="tag-category-list">
+      <ul class="p-0 m-0">
+        {% for tag in site.display_tags_ja %}
+          <li>
+            <i class="fa-solid fa-hashtag fa-sm"></i> <a href="{{ tag | slugify | prepend: '/ja/news/tag/' | relative_url }}">{{ tag }}</a>
+          </li>
+          {% unless forloop.last %}
+            <p>&bull;</p>
+          {% endunless %}
+        {% endfor %}
+      </ul>
+    </div>
+  {% elsif site.display_tags and site.display_tags.size > 0 %}
+    <div class="tag-category-list">
+      <ul class="p-0 m-0">
+        {% for tag in site.display_tags %}
+          <li>
+            <i class="fa-solid fa-hashtag fa-sm"></i> <a href="{{ tag | slugify | prepend: '/en/news/tag/' | relative_url }}">{{ tag }}</a>
+          </li>
+          {% unless forloop.last %}
+            <p>&bull;</p>
+          {% endunless %}
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+
+  <ul class="post-list">
+    {% for post in paginator.posts %}
+      <li>
+        <h3><a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p>{{ post.description }}</p>
+        {% if page.lang == 'ja' %}
+          <p class="post-meta">{{ post.date | date: '%Y年%m月%d日' }}</p>
+        {% else %}
+          <p class="post-meta">{{ post.date | date: '%B %d, %Y' }}</p>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+
+  {% include pagination.liquid %}
+</div> 

@@ -3,7 +3,7 @@ layout: page
 title: ビデオアーカイブ
 permalink: /ja/video-archive/
 description: 
-nav: true
+nav: false
 nav_order: 3
 lang: ja
 ---

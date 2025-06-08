@@ -6,6 +6,7 @@ description: Introducing our new digital family heritage repository
 tags: announcements family-updates
 categories: family-updates
 featured: true
+lang: en
 ---
 
 We are thrilled to announce the launch of the official **Laurence Family Archive**! This digital repository represents a significant milestone in preserving our family's rich heritage for current and future generations.

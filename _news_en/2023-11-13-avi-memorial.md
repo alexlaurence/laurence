@@ -4,6 +4,7 @@ title: "The Laurence Family Mourns The Loss of Avi"
 date: 2023-11-13 18:00:00-0000
 inline: false
 related_posts: false
+lang: en
 ---
 
 It is with profound sadness that we announce the passing of our beloved Avishkar "Avi" Chetri, aged 29, who died by suicide in November 13 2023. Avi was not just a cherished member of our family, but a brilliant artist whose work touched many lives and whose vision for a more compassionate world will continue to inspire us.

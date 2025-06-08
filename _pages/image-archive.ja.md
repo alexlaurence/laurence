@@ -3,7 +3,7 @@ layout: page
 title: 画像アーカイブ
 permalink: /ja/image-archive/
 description: 
-nav: true
+nav: false
 nav_order: 5
 lang: ja
 ---

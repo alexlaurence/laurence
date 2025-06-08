@@ -89,6 +89,10 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 
 blog_name: Laurence Family News # blog_name will be displayed in your blog page
 blog_description: Updates, announcements, and stories from the Laurence family
+
+# Language-specific blog configurations
+blog_name_ja: ローレンス家族ニュース
+blog_description_ja: ローレンス家からの最新情報、お知らせ、物語
 permalink: /family-news/:year/:title/
 lsi: false # produce an index for related posts
 
@@ -142,10 +146,12 @@ newsletter:
 collections:
   books:
     output: true
-  news:
-    defaults:
-      layout: post
+  news_en:
     output: true
+    permalink: /en/news/:year/:month/:title/
+  news_ja:
+    output: true
+    permalink: /ja/news/:year/:month/:title/
   projects:
     output: true
 
@@ -216,6 +222,18 @@ defaults:
       path: "assets"
     values:
       sitemap: false
+  - scope:
+      path: "_news"
+      type: "news"
+    values:
+      layout: post
+      lang: en
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: post
+      lang: en
 
 sass:
   style: compressed
@@ -249,8 +267,13 @@ jekyll-archives:
       categories: "/family-news/:type/:name/"
   books:
     enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
+  news_en:
+    enabled: []
+  news_ja:
+    enabled: []
 
 display_tags: ["family events", "milestones", "celebrations", "memories", "traditions", "announcements"] # these tags will be displayed on the front page of your blog
+display_tags_ja: ["家族イベント", "マイルストーン", "お祝い", "思い出", "伝統", "お知らせ"] # Japanese tags for the Japanese blog pages
 display_categories: ["family-updates", "celebrations", "milestones", "traditions"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------

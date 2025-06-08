@@ -3,7 +3,7 @@ layout: page
 title: ドキュメントアーカイブ
 permalink: /ja/document-archive/
 description: 
-nav: true
+nav: false
 nav_order: 6
 lang: ja
 ---
