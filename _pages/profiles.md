@@ -27,6 +27,6 @@ profiles:
       <p>Born 1996</p>
     content: |
       <h2>Rino Laurence</h2>
-      <p>Rino was born in Nagoya, Japan to a Japanese mother and a Zainichi-Korean father. Following the passing of her father, she relocated to Okazaki with her mother Takako and brother Hiroki, where her family grew to include her step-father Masanobu, step-sister Miku, and half-brother Kento.</p>
+      <p>Rino was born in Nagoya, Japan to a Japanese mother and a Zainichi-Korean father. Following the passing of her father, she relocated to Okazaki with her mother Takako and brother Hiroki, where her family grew to include her step-father Masanobu, step-sister, and half-brother Kento.</p>
       <p>Pursuing higher education, Rino studied pharmacy and nursing, ultimately earning her nursing degree. She began her professional career as a registered nurse at Shinshu University Hospital in Matsumoto, Nagano, where she served for three years. In 2022, she returned to Nagoya and married Alexander Laurence the following year at age 27.</p>
 ---

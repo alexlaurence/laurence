@@ -138,26 +138,6 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/laurence/books/the_godfather/";
-            },},{id: "news_en-the-laurence-family-mourns-the-loss-of-avi",
-          title: 'The Laurence Family Mourns The Loss of Avi',
-          description: "",
-          section: "News_en",handler: () => {
-              window.location.href = "/laurence/en/news/2023/11/avi-memorial/";
-            },},{id: "news_en-welcome-to-the-laurence-family-archive",
-          title: 'Welcome to the Laurence Family Archive',
-          description: "Introducing our new digital family heritage repository",
-          section: "News_en",handler: () => {
-              window.location.href = "/laurence/en/news/2024/01/welcome-to-the-laurence-family-archive/";
-            },},{id: "news_ja-ローレンス家-アヴィの逝去を悼む",
-          title: 'ローレンス家、アヴィの逝去を悼む',
-          description: "",
-          section: "News_ja",handler: () => {
-              window.location.href = "/laurence/ja/news/2023/11/avi-memorial/";
-            },},{id: "news_ja-ローレンス家族アーカイブへようこそ",
-          title: 'ローレンス家族アーカイブへようこそ',
-          description: "新しいデジタル家族遺産レポジトリのご紹介",
-          section: "News_ja",handler: () => {
-              window.location.href = "/laurence/ja/news/2024/01/welcome-to-the-laurence-family-archive/";
             },},{id: "projects-project-1",
           title: 'project 1',
           description: "with background image",
